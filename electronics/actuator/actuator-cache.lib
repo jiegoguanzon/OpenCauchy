@@ -161,11 +161,11 @@ X S 3 100 -200 100 U 50 50 1 1 P
 ENDDRAW
 ENDDEF
 #
-# custom_drv_drv8323rs
+# actuator-rescue_drv8323rs-custom_drv
 #
-DEF custom_drv_drv8323rs U 0 40 Y Y 1 F N
+DEF actuator-rescue_drv8323rs-custom_drv U 0 40 Y Y 1 F N
 F0 "U" -50 1400 50 H V C CNN
-F1 "custom_drv_drv8323rs" -100 1300 50 H V C CNN
+F1 "actuator-rescue_drv8323rs-custom_drv" -100 1300 50 H V C CNN
 F2 "" 0 0 50 H I C CNN
 F3 "" 0 0 50 H I C CNN
 DRAW
