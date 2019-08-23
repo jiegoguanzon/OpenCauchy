@@ -1,4 +1,5 @@
 (sym_lib_table
   (lib (name custom_drv)(type Legacy)(uri C:/Users/jiego/Documents/OpenCauchy/electronics/actuator/custom_drv.lib)(options "")(descr ""))
   (lib (name actuator-rescue)(type Legacy)(uri ${KIPRJMOD}/actuator-rescue.lib)(options "")(descr ""))
+  (lib (name tinkerforge)(type Legacy)(uri C:/Users/jiego/Downloads/kicad-libraries-master/kicad-libraries-master/tinkerforge.lib)(options "")(descr ""))
 )
