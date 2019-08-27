@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://www.netbeans.org/ns/project/1">
+    <type>com.microchip.mplab.nbide.embedded.makeproject</type>
+    <configuration>
+        <data xmlns="http://www.netbeans.org/ns/make-project/1">
+            <name>ex_boot_uart_pic32mm</name>
+            <creation-uuid>bcd69aaa-49f7-490b-a750-329ff9c576de</creation-uuid>
+            <make-project-type>0</make-project-type>
+            <c-extensions>c</c-extensions>
+            <cpp-extensions/>
+            <header-extensions>h</header-extensions>
+            <asminc-extensions/>
+            <sourceEncoding>UTF-8</sourceEncoding>
+            <make-dep-projects/>
+        </data>
+        <spellchecker-wordlist xmlns="http://www.netbeans.org/ns/spellchecker-wordlist/1">
+            <word>bootload</word>
+            <word>Bootloaders</word>
+            <word>Config</word>
+            <word>EZBL</word>
+            <word>initially</word>
+            <word>licensors</word>
+            <word>Microchip's</word>
+            <word>options'</word>
+            <word>printf</word>
+            <word>Schlunder</word>
+            <word>unprotect</word>
+            <word>variadic</word>
+        </spellchecker-wordlist>
+    </configuration>
+</project>

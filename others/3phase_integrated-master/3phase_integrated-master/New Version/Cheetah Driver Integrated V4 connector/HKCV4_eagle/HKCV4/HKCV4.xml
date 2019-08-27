@@ -1,0 +1,1391 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<export version="D">
+  <design>
+    <source>C:\Users\Jiego\Downloads\3phase_integrated-master\3phase_integrated-master\New Version\Cheetah Driver Integrated V4 connector\HKCV4_eagle\HKCV4\HKCV4.sch</source>
+    <date>7/26/2019 9:31:57 PM</date>
+    <tool>Eeschema (5.0.2)-1</tool>
+    <sheet number="1" name="/" tstamps="/">
+      <title_block>
+        <title/>
+        <company/>
+        <rev/>
+        <date/>
+        <source>HKCV4.sch</source>
+        <comment number="1" value=""/>
+        <comment number="2" value=""/>
+        <comment number="3" value=""/>
+        <comment number="4" value=""/>
+      </title_block>
+    </sheet>
+  </design>
+  <components>
+    <comp ref="U$1">
+      <value>DRV8323RH</value>
+      <footprint>HKCV4:QFN50P700X700X90-49N</footprint>
+      <libsource lib="HKCV4-eagle-import" part="DRV8323RH" description=""/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>89E33A62</tstamp>
+    </comp>
+    <comp ref="D1">
+      <value>500 mA 60v</value>
+      <footprint>HKCV4:SOD123</footprint>
+      <libsource lib="HKCV4-eagle-import" part="DIODE-SOD123" description=""/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>E28F359D</tstamp>
+    </comp>
+    <comp ref="L1">
+      <value>22uH</value>
+      <footprint>HKCV4:SDR0302</footprint>
+      <libsource lib="HKCV4-eagle-import" part="SDR0302" description=""/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>8EE1B6B7</tstamp>
+    </comp>
+    <comp ref="C2">
+      <value>.1 uF 50v</value>
+      <footprint>HKCV4:C0603K</footprint>
+      <libsource lib="HKCV4-eagle-import" part="C-USC0603K" description=""/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>78D99729</tstamp>
+    </comp>
+    <comp ref="C3">
+      <value>22 uF 10v</value>
+      <footprint>HKCV4:C0603K</footprint>
+      <libsource lib="HKCV4-eagle-import" part="C-USC0603K" description=""/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>F936D0CB</tstamp>
+    </comp>
+    <comp ref="R1">
+      <value>54.9k 1%</value>
+      <footprint>HKCV4:R0402</footprint>
+      <libsource lib="HKCV4-eagle-import" part="R-US_R0402" description=""/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>D2FC6878</tstamp>
+    </comp>
+    <comp ref="R2">
+      <value>10k 1%</value>
+      <footprint>HKCV4:R0402</footprint>
+      <libsource lib="HKCV4-eagle-import" part="R-US_R0402" description=""/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>4FA470A9</tstamp>
+    </comp>
+    <comp ref="C4">
+      <value>.1 uF 50v</value>
+      <footprint>HKCV4:C0603K</footprint>
+      <libsource lib="HKCV4-eagle-import" part="C-USC0603K" description=""/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>B3F2918A</tstamp>
+    </comp>
+    <comp ref="C5">
+      <value>47 nF 50v</value>
+      <footprint>HKCV4:C0402K</footprint>
+      <libsource lib="HKCV4-eagle-import" part="C-USC0402K" description=""/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>EA8ABB5A</tstamp>
+    </comp>
+    <comp ref="C6">
+      <value>1 uF 50v</value>
+      <footprint>HKCV4:C0603K</footprint>
+      <libsource lib="HKCV4-eagle-import" part="C-USC0603K" description=""/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>77DAC4DE</tstamp>
+    </comp>
+    <comp ref="C7">
+      <value>1 uF 10v</value>
+      <footprint>HKCV4:C0402K</footprint>
+      <libsource lib="HKCV4-eagle-import" part="C-USC0402K" description=""/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>504BC864</tstamp>
+    </comp>
+    <comp ref="R3">
+      <value>10k</value>
+      <footprint>HKCV4:R0402</footprint>
+      <libsource lib="HKCV4-eagle-import" part="R-US_R0402" description=""/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>ABABC248</tstamp>
+    </comp>
+    <comp ref="R4">
+      <value>10k</value>
+      <footprint>HKCV4:R0402</footprint>
+      <libsource lib="HKCV4-eagle-import" part="R-US_R0402" description=""/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>B13F4994</tstamp>
+    </comp>
+    <comp ref="Q2">
+      <value>TPH</value>
+      <footprint>HKCV4:TRANS_TPH5900CNH,L1Q</footprint>
+      <libsource lib="HKCV4-eagle-import" part="TPH" description=""/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>FC4D4FCD</tstamp>
+    </comp>
+    <comp ref="Q1">
+      <value>TPH</value>
+      <footprint>HKCV4:TRANS_TPH5900CNH,L1Q</footprint>
+      <libsource lib="HKCV4-eagle-import" part="TPH" description=""/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>22BC07EB</tstamp>
+    </comp>
+    <comp ref="Q4">
+      <value>TPH</value>
+      <footprint>HKCV4:TRANS_TPH5900CNH,L1Q</footprint>
+      <libsource lib="HKCV4-eagle-import" part="TPH" description=""/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>22452E8B</tstamp>
+    </comp>
+    <comp ref="Q3">
+      <value>TPH</value>
+      <footprint>HKCV4:TRANS_TPH5900CNH,L1Q</footprint>
+      <libsource lib="HKCV4-eagle-import" part="TPH" description=""/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>9A1C1EBA</tstamp>
+    </comp>
+    <comp ref="Q6">
+      <value>TPH</value>
+      <footprint>HKCV4:TRANS_TPH5900CNH,L1Q</footprint>
+      <libsource lib="HKCV4-eagle-import" part="TPH" description=""/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>97620144</tstamp>
+    </comp>
+    <comp ref="Q5">
+      <value>TPH</value>
+      <footprint>HKCV4:TRANS_TPH5900CNH,L1Q</footprint>
+      <libsource lib="HKCV4-eagle-import" part="TPH" description=""/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>A335FF6A</tstamp>
+    </comp>
+    <comp ref="VREFCAP1">
+      <value>.1 uF 10v</value>
+      <footprint>HKCV4:C0402K</footprint>
+      <libsource lib="HKCV4-eagle-import" part="C-USC0402K" description=""/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>8A06B96D</tstamp>
+    </comp>
+    <comp ref="U$3">
+      <value>STM32F446RET6</value>
+      <footprint>HKCV4:TQFP64</footprint>
+      <libsource lib="HKCV4-eagle-import" part="STM32F446RET6" description=""/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>6E1B97F5</tstamp>
+    </comp>
+    <comp ref="R26">
+      <value>150k 1%</value>
+      <footprint>HKCV4:R0402</footprint>
+      <libsource lib="HKCV4-eagle-import" part="R-US_R0402" description=""/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>E8022D0E</tstamp>
+    </comp>
+    <comp ref="R27">
+      <value>10k 1%</value>
+      <footprint>HKCV4:R0402</footprint>
+      <libsource lib="HKCV4-eagle-import" part="R-US_R0402" description=""/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>95D72BC1</tstamp>
+    </comp>
+    <comp ref="CHOKE1">
+      <value>600r</value>
+      <footprint>HKCV4:0603</footprint>
+      <libsource lib="HKCV4-eagle-import" part="INDUCTOR0603" description=""/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>33E8850A</tstamp>
+    </comp>
+    <comp ref="C9">
+      <value>4.7 uF 10v</value>
+      <footprint>HKCV4:C0402K</footprint>
+      <libsource lib="HKCV4-eagle-import" part="C-USC0402K" description=""/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>873A31B2</tstamp>
+    </comp>
+    <comp ref="C10">
+      <value>1 uF 10v</value>
+      <footprint>HKCV4:C0402K</footprint>
+      <libsource lib="HKCV4-eagle-import" part="C-USC0402K" description=""/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>FFFDD88B</tstamp>
+    </comp>
+    <comp ref="C27">
+      <value>.1 uF 10v</value>
+      <footprint>HKCV4:C0402K</footprint>
+      <libsource lib="HKCV4-eagle-import" part="C-USC0402K" description=""/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>56B5D87E</tstamp>
+    </comp>
+    <comp ref="C31">
+      <value>.1 uF 10v</value>
+      <footprint>HKCV4:C0402K</footprint>
+      <libsource lib="HKCV4-eagle-import" part="C-USC0402K" description=""/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>98497E3B</tstamp>
+    </comp>
+    <comp ref="C32">
+      <value>.1 uF 10v</value>
+      <footprint>HKCV4:C0402K</footprint>
+      <libsource lib="HKCV4-eagle-import" part="C-USC0402K" description=""/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>695F0249</tstamp>
+    </comp>
+    <comp ref="LED1">
+      <value>G</value>
+      <footprint>HKCV4:LED-0603</footprint>
+      <libsource lib="HKCV4-eagle-import" part="LED0603" description=""/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>FC0B6B83</tstamp>
+    </comp>
+    <comp ref="R5">
+      <value>200</value>
+      <footprint>HKCV4:R0402</footprint>
+      <libsource lib="HKCV4-eagle-import" part="R-US_R0402" description=""/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>51D965C7</tstamp>
+    </comp>
+    <comp ref="LED2">
+      <value>G</value>
+      <footprint>HKCV4:LED-0603</footprint>
+      <libsource lib="HKCV4-eagle-import" part="LED0603" description=""/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>A3D5C8F8</tstamp>
+    </comp>
+    <comp ref="R22">
+      <value>200</value>
+      <footprint>HKCV4:R0402</footprint>
+      <libsource lib="HKCV4-eagle-import" part="R-US_R0402" description=""/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>37CA8B7B</tstamp>
+    </comp>
+    <comp ref="XT1">
+      <value>CSTCE</value>
+      <footprint>HKCV4:CSTCE</footprint>
+      <libsource lib="HKCV4-eagle-import" part="CSTCE" description=""/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>DAFB719F</tstamp>
+    </comp>
+    <comp ref="C41">
+      <value>.1 uF 10v</value>
+      <footprint>HKCV4:C0402K</footprint>
+      <libsource lib="HKCV4-eagle-import" part="C-USC0402K" description=""/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>81AB72B9</tstamp>
+    </comp>
+    <comp ref="R6">
+      <value>.001</value>
+      <footprint>HKCV4:R1210</footprint>
+      <libsource lib="HKCV4-eagle-import" part="R-US_R1210" description=""/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>F0109801</tstamp>
+    </comp>
+    <comp ref="C33">
+      <value>.1 uF 10v</value>
+      <footprint>HKCV4:C0402K</footprint>
+      <libsource lib="HKCV4-eagle-import" part="C-USC0402K" description=""/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>549591AA</tstamp>
+    </comp>
+    <comp ref="C34">
+      <value>.1 uF 10v</value>
+      <footprint>HKCV4:C0402K</footprint>
+      <libsource lib="HKCV4-eagle-import" part="C-USC0402K" description=""/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>C1571B37</tstamp>
+    </comp>
+    <comp ref="U$4">
+      <value>18_AWG_PAD</value>
+      <footprint>HKCV4:18_AWG_PAD</footprint>
+      <libsource lib="HKCV4-eagle-import" part="18_AWG_PAD" description=""/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>649D799B</tstamp>
+    </comp>
+    <comp ref="U$2">
+      <value>18_AWG_PAD</value>
+      <footprint>HKCV4:18_AWG_PAD</footprint>
+      <libsource lib="HKCV4-eagle-import" part="18_AWG_PAD" description=""/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>87B7DF34</tstamp>
+    </comp>
+    <comp ref="U$5">
+      <value>18_AWG_PAD</value>
+      <footprint>HKCV4:18_AWG_PAD</footprint>
+      <libsource lib="HKCV4-eagle-import" part="18_AWG_PAD" description=""/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>BCE09641</tstamp>
+    </comp>
+    <comp ref="U$6">
+      <value>MCP2542</value>
+      <footprint>HKCV4:TDFN</footprint>
+      <libsource lib="HKCV4-eagle-import" part="MCP2542" description=""/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>CE08125E</tstamp>
+    </comp>
+    <comp ref="LDFM33PUR1">
+      <value>LDFM</value>
+      <footprint>HKCV4:DFN6-3X3</footprint>
+      <libsource lib="HKCV4-eagle-import" part="LDFM" description=""/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>37476326</tstamp>
+    </comp>
+    <comp ref="MC1">
+      <value>1 uF 10v</value>
+      <footprint>HKCV4:C0402K</footprint>
+      <libsource lib="HKCV4-eagle-import" part="C-USC0402K" description=""/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>8D5215D8</tstamp>
+    </comp>
+    <comp ref="C19">
+      <value>22 uF 10v</value>
+      <footprint>HKCV4:C0603K</footprint>
+      <libsource lib="HKCV4-eagle-import" part="C-USC0603K" description=""/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>47595A05</tstamp>
+    </comp>
+    <comp ref="R7">
+      <value>.001</value>
+      <footprint>HKCV4:R1210</footprint>
+      <libsource lib="HKCV4-eagle-import" part="R-US_R1210" description=""/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>0D8D6E1F</tstamp>
+    </comp>
+    <comp ref="C1">
+      <value>10 uF 50v</value>
+      <footprint>HKCV4:C1206K</footprint>
+      <libsource lib="HKCV4-eagle-import" part="C-USC1206K" description=""/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5BF616C7</tstamp>
+    </comp>
+    <comp ref="C8">
+      <value>10 uF 50v</value>
+      <footprint>HKCV4:C1206K</footprint>
+      <libsource lib="HKCV4-eagle-import" part="C-USC1206K" description=""/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>504825E3</tstamp>
+    </comp>
+    <comp ref="C11">
+      <value>10 uF 50v</value>
+      <footprint>HKCV4:C1206K</footprint>
+      <libsource lib="HKCV4-eagle-import" part="C-USC1206K" description=""/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>A328B8B9</tstamp>
+    </comp>
+    <comp ref="C12">
+      <value>10 uF 50v</value>
+      <footprint>HKCV4:C1206K</footprint>
+      <libsource lib="HKCV4-eagle-import" part="C-USC1206K" description=""/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>B6F1133F</tstamp>
+    </comp>
+    <comp ref="C13">
+      <value>10 uF 50v</value>
+      <footprint>HKCV4:C1206K</footprint>
+      <libsource lib="HKCV4-eagle-import" part="C-USC1206K" description=""/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>9E0FC329</tstamp>
+    </comp>
+    <comp ref="C14">
+      <value>10 uF 50v</value>
+      <footprint>HKCV4:C1206K</footprint>
+      <libsource lib="HKCV4-eagle-import" part="C-USC1206K" description=""/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>E20A4D19</tstamp>
+    </comp>
+    <comp ref="C15">
+      <value>10 uF 50v</value>
+      <footprint>HKCV4:C1206K</footprint>
+      <libsource lib="HKCV4-eagle-import" part="C-USC1206K" description=""/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>31F44B47</tstamp>
+    </comp>
+    <comp ref="C16">
+      <value>10 uF 50v</value>
+      <footprint>HKCV4:C1206K</footprint>
+      <libsource lib="HKCV4-eagle-import" part="C-USC1206K" description=""/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>AA46E0A7</tstamp>
+    </comp>
+    <comp ref="C17">
+      <value>10 uF 50v</value>
+      <footprint>HKCV4:C1206K</footprint>
+      <libsource lib="HKCV4-eagle-import" part="C-USC1206K" description=""/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>B145B814</tstamp>
+    </comp>
+    <comp ref="C18">
+      <value>.1 uF 10v</value>
+      <footprint>HKCV4:C0402K</footprint>
+      <libsource lib="HKCV4-eagle-import" part="C-USC0402K" description=""/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>A745AE00</tstamp>
+    </comp>
+    <comp ref="U$11">
+      <value>MA700</value>
+      <footprint>HKCV4:QFN16</footprint>
+      <libsource lib="HKCV4-eagle-import" part="MA700" description=""/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>ABBF7E6D</tstamp>
+    </comp>
+    <comp ref="YCAP1">
+      <value>dnp</value>
+      <footprint>HKCV4:C0402K</footprint>
+      <libsource lib="HKCV4-eagle-import" part="C-USC0402K" description=""/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>E8457B81</tstamp>
+    </comp>
+    <comp ref="YCAP2">
+      <value>dnp</value>
+      <footprint>HKCV4:C0402K</footprint>
+      <libsource lib="HKCV4-eagle-import" part="C-USC0402K" description=""/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>6818E15D</tstamp>
+    </comp>
+    <comp ref="YCAP3">
+      <value>dnp</value>
+      <footprint>HKCV4:C0402K</footprint>
+      <libsource lib="HKCV4-eagle-import" part="C-USC0402K" description=""/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>8F6DD24A</tstamp>
+    </comp>
+    <comp ref="C20">
+      <value>22 uF 10v</value>
+      <footprint>HKCV4:C0603K</footprint>
+      <libsource lib="HKCV4-eagle-import" part="C-USC0603K" description=""/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>05F413F9</tstamp>
+    </comp>
+    <comp ref="PROG1">
+      <value>?M07B-SRSS-TBS</value>
+      <footprint>HKCV4:SM07B-SRSS-TB</footprint>
+      <libsource lib="HKCV4-eagle-import" part="?M07B-SRSS-TBS" description=""/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>EC0E3A8B</tstamp>
+    </comp>
+    <comp ref="U$9">
+      <value>XT30</value>
+      <footprint>HKCV4:XT30_HORIZONTAL</footprint>
+      <libsource lib="HKCV4-eagle-import" part="XT30" description=""/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>9E0009A5</tstamp>
+    </comp>
+    <comp ref="CAN1">
+      <value>5267-3</value>
+      <footprint>HKCV4:5267-3</footprint>
+      <libsource lib="HKCV4-eagle-import" part="5267-3" description=""/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>70029B44</tstamp>
+    </comp>
+    <comp ref="C21">
+      <value>10 uF 50v</value>
+      <footprint>HKCV4:C1206K</footprint>
+      <libsource lib="HKCV4-eagle-import" part="C-USC1206K" description=""/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>DF3F813B</tstamp>
+    </comp>
+    <comp ref="C22">
+      <value>10 uF 50v</value>
+      <footprint>HKCV4:C1206K</footprint>
+      <libsource lib="HKCV4-eagle-import" part="C-USC1206K" description=""/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>F207FBF8</tstamp>
+    </comp>
+    <comp ref="C23">
+      <value>10 uF 50v</value>
+      <footprint>HKCV4:C1206K</footprint>
+      <libsource lib="HKCV4-eagle-import" part="C-USC1206K" description=""/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>C1F1E4E3</tstamp>
+    </comp>
+    <comp ref="C24">
+      <value>10 uF 50v</value>
+      <footprint>HKCV4:C1206K</footprint>
+      <libsource lib="HKCV4-eagle-import" part="C-USC1206K" description=""/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>25097003</tstamp>
+    </comp>
+    <comp ref="C25">
+      <value>10 uF 50v</value>
+      <footprint>HKCV4:C1206K</footprint>
+      <libsource lib="HKCV4-eagle-import" part="C-USC1206K" description=""/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>0D06AA65</tstamp>
+    </comp>
+    <comp ref="C26">
+      <value>10 uF 50v</value>
+      <footprint>HKCV4:C1206K</footprint>
+      <libsource lib="HKCV4-eagle-import" part="C-USC1206K" description=""/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5CF05457</tstamp>
+    </comp>
+    <comp ref="C28">
+      <value>10 uF 50v</value>
+      <footprint>HKCV4:C1206K</footprint>
+      <libsource lib="HKCV4-eagle-import" part="C-USC1206K" description=""/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>F9CC296D</tstamp>
+    </comp>
+    <comp ref="C29">
+      <value>10 uF 50v</value>
+      <footprint>HKCV4:C1206K</footprint>
+      <libsource lib="HKCV4-eagle-import" part="C-USC1206K" description=""/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>EEF414CE</tstamp>
+    </comp>
+  </components>
+  <libparts>
+    <libpart lib="HKCV4-eagle-import" part="18_AWG_PAD">
+      <fields>
+        <field name="Value">18_AWG_PAD</field>
+      </fields>
+      <pins>
+        <pin num="P$1" name="P$1" type="unspc"/>
+      </pins>
+    </libpart>
+    <libpart lib="HKCV4-eagle-import" part="5267-3">
+      <fields>
+        <field name="Reference">J</field>
+        <field name="Value">5267-3</field>
+      </fields>
+      <pins>
+        <pin num="P$1" name="-1" type="unspc"/>
+        <pin num="P$2" name="-2" type="unspc"/>
+        <pin num="P$3" name="-3" type="unspc"/>
+      </pins>
+    </libpart>
+    <libpart lib="HKCV4-eagle-import" part="?M07B-SRSS-TBS">
+      <fields>
+        <field name="Reference">X</field>
+        <field name="Value">?M07B-SRSS-TBS</field>
+      </fields>
+      <pins>
+        <pin num="1" name="S" type="passive"/>
+        <pin num="2" name="S" type="passive"/>
+        <pin num="3" name="S" type="passive"/>
+        <pin num="4" name="S" type="passive"/>
+        <pin num="5" name="S" type="passive"/>
+        <pin num="6" name="S" type="passive"/>
+        <pin num="7" name="S" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="HKCV4-eagle-import" part="C-USC0402K">
+      <fields>
+        <field name="Reference">C</field>
+        <field name="Value">C-USC0402K</field>
+      </fields>
+      <pins>
+        <pin num="1" name="1" type="passive"/>
+        <pin num="2" name="2" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="HKCV4-eagle-import" part="C-USC0603K">
+      <fields>
+        <field name="Reference">C</field>
+        <field name="Value">C-USC0603K</field>
+      </fields>
+      <pins>
+        <pin num="1" name="1" type="passive"/>
+        <pin num="2" name="2" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="HKCV4-eagle-import" part="C-USC1206K">
+      <fields>
+        <field name="Reference">C</field>
+        <field name="Value">C-USC1206K</field>
+      </fields>
+      <pins>
+        <pin num="1" name="1" type="passive"/>
+        <pin num="2" name="2" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="HKCV4-eagle-import" part="CSTCE">
+      <fields>
+        <field name="Reference">XT</field>
+        <field name="Value">CSTCE</field>
+      </fields>
+      <pins>
+        <pin num="1" name="1" type="passive"/>
+        <pin num="2" name="2" type="passive"/>
+        <pin num="3" name="3" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="HKCV4-eagle-import" part="DIODE-SOD123">
+      <fields>
+        <field name="Reference">D</field>
+        <field name="Value">DIODE-SOD123</field>
+      </fields>
+      <pins>
+        <pin num="A" name="A" type="passive"/>
+        <pin num="C" name="C" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="HKCV4-eagle-import" part="DRV8323RH">
+      <fields>
+        <field name="Value">DRV8323RH</field>
+      </fields>
+      <pins>
+        <pin num="1" name="FB" type="unspc"/>
+        <pin num="2" name="PGND" type="unspc"/>
+        <pin num="3" name="CPL" type="unspc"/>
+        <pin num="4" name="CPH" type="unspc"/>
+        <pin num="5" name="VCP" type="unspc"/>
+        <pin num="6" name="VM" type="unspc"/>
+        <pin num="7" name="VDRAIN" type="unspc"/>
+        <pin num="8" name="GHA" type="unspc"/>
+        <pin num="9" name="SHA" type="unspc"/>
+        <pin num="10" name="GLA" type="unspc"/>
+        <pin num="11" name="SPA" type="unspc"/>
+        <pin num="12" name="SNA" type="unspc"/>
+        <pin num="13" name="SNB" type="unspc"/>
+        <pin num="14" name="SPB" type="unspc"/>
+        <pin num="15" name="GLB" type="unspc"/>
+        <pin num="16" name="SHB" type="unspc"/>
+        <pin num="17" name="GHB" type="unspc"/>
+        <pin num="18" name="GHC" type="unspc"/>
+        <pin num="19" name="SHC" type="unspc"/>
+        <pin num="20" name="GLC" type="unspc"/>
+        <pin num="21" name="SPC" type="unspc"/>
+        <pin num="22" name="SNC" type="unspc"/>
+        <pin num="23" name="SOC" type="unspc"/>
+        <pin num="24" name="SOB" type="unspc"/>
+        <pin num="25" name="SOA" type="unspc"/>
+        <pin num="26" name="VREF" type="unspc"/>
+        <pin num="27" name="DGND" type="unspc"/>
+        <pin num="28" name="NFAULT" type="unspc"/>
+        <pin num="29" name="MODE" type="unspc"/>
+        <pin num="30" name="IDRIVE" type="unspc"/>
+        <pin num="31" name="VDS" type="unspc"/>
+        <pin num="32" name="GAIN" type="unspc"/>
+        <pin num="33" name="ENABLE" type="unspc"/>
+        <pin num="34" name="CAL" type="unspc"/>
+        <pin num="35" name="AGND" type="unspc"/>
+        <pin num="36" name="DVDD" type="unspc"/>
+        <pin num="37" name="INHA" type="unspc"/>
+        <pin num="38" name="INLA" type="unspc"/>
+        <pin num="39" name="INHB" type="unspc"/>
+        <pin num="40" name="INLB" type="unspc"/>
+        <pin num="41" name="INHC" type="unspc"/>
+        <pin num="42" name="INLC" type="unspc"/>
+        <pin num="43" name="BGND" type="unspc"/>
+        <pin num="44" name="CB" type="unspc"/>
+        <pin num="45" name="SW" type="unspc"/>
+        <pin num="46" name="NC" type="unspc"/>
+        <pin num="47" name="VIN" type="unspc"/>
+        <pin num="48" name="NSHDN" type="unspc"/>
+        <pin num="49" name="PGND" type="unspc"/>
+      </pins>
+    </libpart>
+    <libpart lib="HKCV4-eagle-import" part="INDUCTOR0603">
+      <fields>
+        <field name="Reference">L</field>
+        <field name="Value">INDUCTOR0603</field>
+      </fields>
+      <pins>
+        <pin num="1" name="1" type="passive"/>
+        <pin num="2" name="2" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="HKCV4-eagle-import" part="LDFM">
+      <fields>
+        <field name="Value">LDFM</field>
+      </fields>
+      <pins>
+        <pin num="1" name="VO" type="unspc"/>
+        <pin num="3" name="PG" type="unspc"/>
+        <pin num="4" name="GND" type="unspc"/>
+        <pin num="5" name="EN" type="unspc"/>
+        <pin num="6" name="VI" type="unspc"/>
+        <pin num="EXP" name="GND" type="unspc"/>
+      </pins>
+    </libpart>
+    <libpart lib="HKCV4-eagle-import" part="LED0603">
+      <fields>
+        <field name="Reference">D</field>
+        <field name="Value">LED0603</field>
+      </fields>
+      <pins>
+        <pin num="A" name="A" type="passive"/>
+        <pin num="C" name="C" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="HKCV4-eagle-import" part="MA700">
+      <fields>
+        <field name="Value">MA700</field>
+      </fields>
+      <pins>
+        <pin num="1" name="NC1" type="unspc"/>
+        <pin num="2" name="B" type="unspc"/>
+        <pin num="3" name="Z" type="unspc"/>
+        <pin num="4" name="MOSI" type="unspc"/>
+        <pin num="5" name="CS" type="unspc"/>
+        <pin num="6" name="A" type="unspc"/>
+        <pin num="7" name="MISO" type="unspc"/>
+        <pin num="8" name="GND" type="unspc"/>
+        <pin num="9" name="NC2" type="unspc"/>
+        <pin num="10" name="NC3" type="unspc"/>
+        <pin num="11" name="NC4" type="unspc"/>
+        <pin num="12" name="SCLK" type="unspc"/>
+        <pin num="13" name="VDD" type="unspc"/>
+        <pin num="14" name="NC5" type="unspc"/>
+        <pin num="15" name="NC6" type="unspc"/>
+        <pin num="16" name="VFLASH" type="unspc"/>
+        <pin num="TH" name="GND" type="unspc"/>
+      </pins>
+    </libpart>
+    <libpart lib="HKCV4-eagle-import" part="MCP2542">
+      <fields>
+        <field name="Value">MCP2542</field>
+      </fields>
+      <pins>
+        <pin num="1" name="TXD" type="unspc"/>
+        <pin num="2" name="VSS" type="unspc"/>
+        <pin num="3" name="VDD" type="unspc"/>
+        <pin num="4" name="RXD" type="unspc"/>
+        <pin num="5" name="VIO" type="unspc"/>
+        <pin num="6" name="CANL" type="unspc"/>
+        <pin num="7" name="CANH" type="unspc"/>
+        <pin num="8" name="STBY" type="unspc"/>
+        <pin num="9" name="VSS" type="unspc"/>
+      </pins>
+    </libpart>
+    <libpart lib="HKCV4-eagle-import" part="R-US_R0402">
+      <fields>
+        <field name="Reference">R</field>
+        <field name="Value">R-US_R0402</field>
+      </fields>
+      <pins>
+        <pin num="1" name="1" type="passive"/>
+        <pin num="2" name="2" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="HKCV4-eagle-import" part="R-US_R1210">
+      <fields>
+        <field name="Reference">R</field>
+        <field name="Value">R-US_R1210</field>
+      </fields>
+      <pins>
+        <pin num="1" name="1" type="passive"/>
+        <pin num="2" name="2" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="HKCV4-eagle-import" part="SDR0302">
+      <fields>
+        <field name="Reference">L</field>
+        <field name="Value">SDR0302</field>
+      </fields>
+      <pins>
+        <pin num="1" name="1" type="passive"/>
+        <pin num="2" name="2" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="HKCV4-eagle-import" part="STM32F446RET6">
+      <fields>
+        <field name="Value">STM32F446RET6</field>
+      </fields>
+      <pins>
+        <pin num="1" name="VBAT" type="unspc"/>
+        <pin num="2" name="PC13" type="unspc"/>
+        <pin num="3" name="PC14" type="unspc"/>
+        <pin num="4" name="PC15" type="unspc"/>
+        <pin num="5" name="PH0" type="unspc"/>
+        <pin num="6" name="PH1" type="unspc"/>
+        <pin num="7" name="NRST" type="unspc"/>
+        <pin num="8" name="PC0" type="unspc"/>
+        <pin num="9" name="PC1" type="unspc"/>
+        <pin num="10" name="PC2" type="unspc"/>
+        <pin num="11" name="PC3" type="unspc"/>
+        <pin num="12" name="VSSA" type="unspc"/>
+        <pin num="13" name="VDDA" type="unspc"/>
+        <pin num="14" name="PA0" type="unspc"/>
+        <pin num="15" name="PA1" type="unspc"/>
+        <pin num="16" name="PA2/UART2_TX" type="unspc"/>
+        <pin num="17" name="PA3/UART2_RX" type="unspc"/>
+        <pin num="18" name="VSS1" type="unspc"/>
+        <pin num="19" name="VDD1" type="unspc"/>
+        <pin num="20" name="PA4/SPI1_NSS" type="unspc"/>
+        <pin num="21" name="PA5/SPI1_SCK" type="unspc"/>
+        <pin num="22" name="PA6/SPI1_MISO" type="unspc"/>
+        <pin num="23" name="PA7/SPI1_MOSI" type="unspc"/>
+        <pin num="24" name="PC4" type="unspc"/>
+        <pin num="25" name="PC5" type="unspc"/>
+        <pin num="26" name="PB0" type="unspc"/>
+        <pin num="27" name="PB1" type="unspc"/>
+        <pin num="28" name="PB2-BOOT1" type="unspc"/>
+        <pin num="29" name="PB10" type="unspc"/>
+        <pin num="30" name="VCAP1" type="unspc"/>
+        <pin num="31" name="VSS3" type="unspc"/>
+        <pin num="32" name="VDD2" type="unspc"/>
+        <pin num="33" name="PB12/I2S2_WS" type="unspc"/>
+        <pin num="34" name="PB13/I2S2_CK" type="unspc"/>
+        <pin num="35" name="PB14/I2S2_XD" type="unspc"/>
+        <pin num="36" name="PB15/I2S2_SD" type="unspc"/>
+        <pin num="37" name="PC6/I2S2_MCK" type="unspc"/>
+        <pin num="38" name="PC7" type="unspc"/>
+        <pin num="39" name="PC8/SDIO_D0" type="unspc"/>
+        <pin num="40" name="PC9/SDIO_D1" type="unspc"/>
+        <pin num="41" name="PA8" type="unspc"/>
+        <pin num="42" name="PA9/UART1_TX" type="unspc"/>
+        <pin num="43" name="PA10/UART1_RX" type="unspc"/>
+        <pin num="44" name="PA11" type="unspc"/>
+        <pin num="45" name="PA12" type="unspc"/>
+        <pin num="46" name="PA13/JTMS" type="unspc"/>
+        <pin num="47" name="VSS4" type="unspc"/>
+        <pin num="48" name="VDD3" type="unspc"/>
+        <pin num="49" name="PA14/JTCK" type="unspc"/>
+        <pin num="50" name="PA15/JTDI" type="unspc"/>
+        <pin num="51" name="PC10/SDIO_D2" type="unspc"/>
+        <pin num="52" name="PC11/SDIO_D3" type="unspc"/>
+        <pin num="53" name="PC12/SDIO_CLK" type="unspc"/>
+        <pin num="54" name="PD2/SDIO_CMD" type="unspc"/>
+        <pin num="55" name="PB3/JTDO" type="unspc"/>
+        <pin num="56" name="PB4/JTRST" type="unspc"/>
+        <pin num="57" name="PB5" type="unspc"/>
+        <pin num="58" name="PB6" type="unspc"/>
+        <pin num="59" name="PB7" type="unspc"/>
+        <pin num="60" name="BOOT0" type="unspc"/>
+        <pin num="61" name="PB8" type="unspc"/>
+        <pin num="62" name="PB9" type="unspc"/>
+        <pin num="63" name="VSS2" type="unspc"/>
+        <pin num="64" name="VDD4" type="unspc"/>
+      </pins>
+    </libpart>
+    <libpart lib="HKCV4-eagle-import" part="TPH">
+      <fields>
+        <field name="Value">TPH</field>
+      </fields>
+      <pins>
+        <pin num="1" name="S" type="passive"/>
+        <pin num="2" name="S" type="passive"/>
+        <pin num="3" name="S" type="passive"/>
+        <pin num="4" name="G" type="passive"/>
+        <pin num="5" name="D" type="passive"/>
+        <pin num="6" name="D" type="passive"/>
+        <pin num="7" name="D" type="passive"/>
+        <pin num="8" name="D" type="passive"/>
+        <pin num="EP" name="D" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="HKCV4-eagle-import" part="XT30">
+      <fields>
+        <field name="Value">XT30</field>
+      </fields>
+      <pins>
+        <pin num="+" name="+" type="unspc"/>
+        <pin num="-" name="-" type="unspc"/>
+      </pins>
+    </libpart>
+  </libparts>
+  <libraries>
+    <library logical="HKCV4-eagle-import">
+      <uri>C:\Users\Jiego\Downloads\3phase_integrated-master\3phase_integrated-master\New Version\Cheetah Driver Integrated V4 connector\HKCV4_eagle\HKCV4/HKCV4-eagle-import.lib</uri>
+    </library>
+  </libraries>
+  <nets>
+    <net code="1" name="Net-(C5-Pad2)">
+      <node ref="C5" pin="2"/>
+      <node ref="U$1" pin="3"/>
+    </net>
+    <net code="2" name="Net-(C6-Pad2)">
+      <node ref="C6" pin="2"/>
+      <node ref="U$1" pin="5"/>
+    </net>
+    <net code="3" name="GND">
+      <node ref="C15" pin="2"/>
+      <node ref="C17" pin="2"/>
+      <node ref="C16" pin="2"/>
+      <node ref="C13" pin="2"/>
+      <node ref="C18" pin="2"/>
+      <node ref="C12" pin="2"/>
+      <node ref="C11" pin="2"/>
+      <node ref="C8" pin="2"/>
+      <node ref="C1" pin="2"/>
+      <node ref="C14" pin="2"/>
+      <node ref="U$6" pin="2"/>
+      <node ref="LDFM33PUR1" pin="4"/>
+      <node ref="U$6" pin="9"/>
+      <node ref="U$6" pin="8"/>
+      <node ref="U$1" pin="13"/>
+      <node ref="U$1" pin="35"/>
+      <node ref="U$1" pin="27"/>
+      <node ref="U$1" pin="22"/>
+      <node ref="U$1" pin="21"/>
+      <node ref="LDFM33PUR1" pin="EXP"/>
+      <node ref="U$1" pin="12"/>
+      <node ref="U$11" pin="TH"/>
+      <node ref="R27" pin="1"/>
+      <node ref="C20" pin="2"/>
+      <node ref="C10" pin="2"/>
+      <node ref="C27" pin="2"/>
+      <node ref="YCAP1" pin="1"/>
+      <node ref="PROG1" pin="3"/>
+      <node ref="U$11" pin="8"/>
+      <node ref="R6" pin="1"/>
+      <node ref="U$3" pin="47"/>
+      <node ref="U$3" pin="12"/>
+      <node ref="U$3" pin="18"/>
+      <node ref="C31" pin="2"/>
+      <node ref="C32" pin="2"/>
+      <node ref="LED1" pin="C"/>
+      <node ref="LED2" pin="C"/>
+      <node ref="XT1" pin="2"/>
+      <node ref="C41" pin="2"/>
+      <node ref="YCAP2" pin="1"/>
+      <node ref="C33" pin="2"/>
+      <node ref="C34" pin="2"/>
+      <node ref="U$3" pin="31"/>
+      <node ref="U$3" pin="60"/>
+      <node ref="U$3" pin="63"/>
+      <node ref="MC1" pin="2"/>
+      <node ref="C21" pin="2"/>
+      <node ref="CAN1" pin="P$3"/>
+      <node ref="R7" pin="1"/>
+      <node ref="C19" pin="2"/>
+      <node ref="C22" pin="2"/>
+      <node ref="C28" pin="2"/>
+      <node ref="C29" pin="2"/>
+      <node ref="C26" pin="2"/>
+      <node ref="U$9" pin="-"/>
+      <node ref="C25" pin="2"/>
+      <node ref="C24" pin="2"/>
+      <node ref="C23" pin="2"/>
+      <node ref="D1" pin="A"/>
+      <node ref="C3" pin="2"/>
+      <node ref="C2" pin="2"/>
+      <node ref="Q6" pin="1"/>
+      <node ref="Q6" pin="2"/>
+      <node ref="Q6" pin="3"/>
+      <node ref="U$1" pin="49"/>
+      <node ref="U$1" pin="43"/>
+      <node ref="VREFCAP1" pin="2"/>
+      <node ref="R2" pin="1"/>
+      <node ref="C7" pin="2"/>
+      <node ref="U$1" pin="2"/>
+    </net>
+    <net code="4" name="/SPA">
+      <node ref="U$1" pin="11"/>
+      <node ref="Q2" pin="3"/>
+      <node ref="Q2" pin="2"/>
+      <node ref="Q2" pin="1"/>
+      <node ref="R7" pin="2"/>
+    </net>
+    <net code="5" name="Net-(C4-Pad2)">
+      <node ref="U$1" pin="44"/>
+      <node ref="C4" pin="2"/>
+    </net>
+    <net code="6" name="Net-(U$1-Pad46)">
+      <node ref="U$1" pin="46"/>
+    </net>
+    <net code="7" name="Net-(U$1-Pad48)">
+      <node ref="U$1" pin="48"/>
+    </net>
+    <net code="8" name="+24V">
+      <node ref="R26" pin="2"/>
+      <node ref="C21" pin="1"/>
+      <node ref="Q5" pin="EP"/>
+      <node ref="Q1" pin="5"/>
+      <node ref="Q1" pin="6"/>
+      <node ref="Q1" pin="7"/>
+      <node ref="Q1" pin="8"/>
+      <node ref="Q1" pin="EP"/>
+      <node ref="C1" pin="1"/>
+      <node ref="C26" pin="1"/>
+      <node ref="C22" pin="1"/>
+      <node ref="C23" pin="1"/>
+      <node ref="C24" pin="1"/>
+      <node ref="C25" pin="1"/>
+      <node ref="C28" pin="1"/>
+      <node ref="Q3" pin="5"/>
+      <node ref="C29" pin="1"/>
+      <node ref="Q3" pin="6"/>
+      <node ref="Q3" pin="7"/>
+      <node ref="YCAP3" pin="1"/>
+      <node ref="U$9" pin="+"/>
+      <node ref="Q5" pin="7"/>
+      <node ref="C16" pin="1"/>
+      <node ref="C6" pin="1"/>
+      <node ref="C17" pin="1"/>
+      <node ref="C15" pin="1"/>
+      <node ref="U$1" pin="47"/>
+      <node ref="U$1" pin="6"/>
+      <node ref="U$1" pin="7"/>
+      <node ref="C14" pin="1"/>
+      <node ref="Q3" pin="EP"/>
+      <node ref="Q5" pin="8"/>
+      <node ref="Q5" pin="6"/>
+      <node ref="Q5" pin="5"/>
+      <node ref="Q3" pin="8"/>
+      <node ref="C13" pin="1"/>
+      <node ref="C8" pin="1"/>
+      <node ref="C11" pin="1"/>
+      <node ref="C2" pin="1"/>
+      <node ref="C12" pin="1"/>
+    </net>
+    <net code="9" name="Net-(C4-Pad1)">
+      <node ref="C4" pin="1"/>
+      <node ref="U$1" pin="45"/>
+      <node ref="D1" pin="C"/>
+      <node ref="L1" pin="2"/>
+    </net>
+    <net code="10" name="/PWMA">
+      <node ref="U$3" pin="43"/>
+      <node ref="U$1" pin="41"/>
+    </net>
+    <net code="11" name="Net-(U$3-Pad6)">
+      <node ref="U$3" pin="6"/>
+      <node ref="XT1" pin="3"/>
+    </net>
+    <net code="12" name="+5V">
+      <node ref="LDFM33PUR1" pin="6"/>
+      <node ref="R1" pin="2"/>
+      <node ref="C3" pin="1"/>
+      <node ref="U$6" pin="3"/>
+      <node ref="LDFM33PUR1" pin="5"/>
+      <node ref="L1" pin="1"/>
+      <node ref="C34" pin="1"/>
+      <node ref="MC1" pin="1"/>
+    </net>
+    <net code="13" name="/CANL">
+      <node ref="U$6" pin="6"/>
+      <node ref="CAN1" pin="P$1"/>
+    </net>
+    <net code="14" name="/CAN_TX">
+      <node ref="U$3" pin="58"/>
+      <node ref="U$6" pin="1"/>
+      <node ref="U$3" pin="62"/>
+    </net>
+    <net code="15" name="/SCK">
+      <node ref="U$11" pin="12"/>
+      <node ref="U$3" pin="51"/>
+    </net>
+    <net code="16" name="Net-(C9-Pad2)">
+      <node ref="C9" pin="2"/>
+      <node ref="U$3" pin="30"/>
+    </net>
+    <net code="17" name="/CAN_RX">
+      <node ref="U$6" pin="4"/>
+      <node ref="U$3" pin="59"/>
+      <node ref="U$3" pin="61"/>
+    </net>
+    <net code="18" name="Net-(LED1-PadA)">
+      <node ref="LED1" pin="A"/>
+      <node ref="R5" pin="1"/>
+    </net>
+    <net code="19" name="Net-(LED2-PadA)">
+      <node ref="LED2" pin="A"/>
+      <node ref="R22" pin="1"/>
+    </net>
+    <net code="20" name="/INDICATOR">
+      <node ref="R22" pin="2"/>
+      <node ref="U$3" pin="25"/>
+    </net>
+    <net code="21" name="/SPI-MISO">
+      <node ref="U$1" pin="29"/>
+      <node ref="R3" pin="1"/>
+      <node ref="U$3" pin="22"/>
+    </net>
+    <net code="22" name="/GHB">
+      <node ref="U$1" pin="17"/>
+      <node ref="Q3" pin="4"/>
+    </net>
+    <net code="23" name="/GHC">
+      <node ref="U$1" pin="18"/>
+      <node ref="Q5" pin="4"/>
+    </net>
+    <net code="24" name="/GLC">
+      <node ref="Q6" pin="4"/>
+      <node ref="U$1" pin="20"/>
+    </net>
+    <net code="25" name="/I_C">
+      <node ref="U$1" pin="23"/>
+    </net>
+    <net code="26" name="/I_B">
+      <node ref="U$3" pin="9"/>
+      <node ref="U$1" pin="24"/>
+    </net>
+    <net code="27" name="/I_A">
+      <node ref="U$1" pin="25"/>
+      <node ref="U$3" pin="8"/>
+    </net>
+    <net code="28" name="/FAULT">
+      <node ref="U$1" pin="28"/>
+      <node ref="R4" pin="1"/>
+    </net>
+    <net code="29" name="/SPI-MOSI">
+      <node ref="U$1" pin="30"/>
+      <node ref="U$3" pin="23"/>
+    </net>
+    <net code="30" name="/SPI-SCK">
+      <node ref="U$1" pin="31"/>
+      <node ref="U$3" pin="21"/>
+    </net>
+    <net code="31" name="/SPI-NSS-DRV">
+      <node ref="U$1" pin="32"/>
+      <node ref="U$3" pin="20"/>
+    </net>
+    <net code="32" name="/CAL">
+      <node ref="U$1" pin="34"/>
+    </net>
+    <net code="33" name="Net-(C7-Pad1)">
+      <node ref="C7" pin="1"/>
+      <node ref="U$1" pin="36"/>
+    </net>
+    <net code="34" name="/PWMC">
+      <node ref="U$1" pin="37"/>
+      <node ref="U$3" pin="41"/>
+    </net>
+    <net code="35" name="/ENABLE">
+      <node ref="U$1" pin="38"/>
+      <node ref="U$3" pin="44"/>
+      <node ref="U$1" pin="42"/>
+      <node ref="U$1" pin="40"/>
+      <node ref="U$1" pin="33"/>
+    </net>
+    <net code="36" name="Net-(C5-Pad1)">
+      <node ref="U$1" pin="4"/>
+      <node ref="C5" pin="1"/>
+    </net>
+    <net code="37" name="Net-(U$11-Pad1)">
+      <node ref="U$11" pin="1"/>
+    </net>
+    <net code="38" name="/ENC_A">
+      <node ref="U$11" pin="6"/>
+    </net>
+    <net code="39" name="/ENC_B">
+      <node ref="U$11" pin="2"/>
+    </net>
+    <net code="40" name="/N$4">
+      <node ref="YCAP1" pin="2"/>
+    </net>
+    <net code="41" name="/N$6">
+      <node ref="YCAP3" pin="2"/>
+      <node ref="YCAP2" pin="2"/>
+    </net>
+    <net code="42" name="Net-(R1-Pad1)">
+      <node ref="R2" pin="2"/>
+      <node ref="R1" pin="1"/>
+      <node ref="U$1" pin="1"/>
+    </net>
+    <net code="43" name="/GLA">
+      <node ref="Q2" pin="4"/>
+      <node ref="U$1" pin="10"/>
+    </net>
+    <net code="44" name="/GLB">
+      <node ref="U$1" pin="15"/>
+      <node ref="Q4" pin="4"/>
+    </net>
+    <net code="45" name="Net-(U$11-Pad10)">
+      <node ref="U$11" pin="10"/>
+    </net>
+    <net code="46" name="Net-(U$11-Pad11)">
+      <node ref="U$11" pin="11"/>
+    </net>
+    <net code="47" name="/PHASC">
+      <node ref="Q5" pin="1"/>
+      <node ref="Q6" pin="EP"/>
+      <node ref="Q5" pin="2"/>
+      <node ref="Q5" pin="3"/>
+      <node ref="Q6" pin="8"/>
+      <node ref="Q6" pin="7"/>
+      <node ref="U$5" pin="P$1"/>
+      <node ref="Q6" pin="6"/>
+      <node ref="U$1" pin="19"/>
+      <node ref="Q6" pin="5"/>
+    </net>
+    <net code="48" name="/CANH">
+      <node ref="CAN1" pin="P$2"/>
+      <node ref="U$6" pin="7"/>
+    </net>
+    <net code="49" name="Net-(LDFM33PUR1-Pad3)">
+      <node ref="LDFM33PUR1" pin="3"/>
+    </net>
+    <net code="50" name="Net-(U$11-Pad14)">
+      <node ref="U$11" pin="14"/>
+    </net>
+    <net code="51" name="Net-(U$11-Pad15)">
+      <node ref="U$11" pin="15"/>
+    </net>
+    <net code="52" name="Net-(U$11-Pad16)">
+      <node ref="U$11" pin="16"/>
+    </net>
+    <net code="53" name="Net-(U$11-Pad3)">
+      <node ref="U$11" pin="3"/>
+    </net>
+    <net code="54" name="Net-(U$11-Pad9)">
+      <node ref="U$11" pin="9"/>
+    </net>
+    <net code="55" name="/PHASB">
+      <node ref="Q4" pin="EP"/>
+      <node ref="Q4" pin="8"/>
+      <node ref="Q4" pin="7"/>
+      <node ref="Q4" pin="6"/>
+      <node ref="Q4" pin="5"/>
+      <node ref="U$1" pin="16"/>
+      <node ref="Q3" pin="1"/>
+      <node ref="Q3" pin="2"/>
+      <node ref="Q3" pin="3"/>
+      <node ref="U$2" pin="P$1"/>
+    </net>
+    <net code="56" name="/PWMB">
+      <node ref="U$1" pin="39"/>
+      <node ref="U$3" pin="42"/>
+    </net>
+    <net code="57" name="Net-(U$3-Pad33)">
+      <node ref="U$3" pin="33"/>
+    </net>
+    <net code="58" name="Net-(U$3-Pad34)">
+      <node ref="U$3" pin="34"/>
+    </net>
+    <net code="59" name="Net-(U$3-Pad35)">
+      <node ref="U$3" pin="35"/>
+    </net>
+    <net code="60" name="Net-(U$3-Pad36)">
+      <node ref="U$3" pin="36"/>
+    </net>
+    <net code="61" name="Net-(U$3-Pad37)">
+      <node ref="U$3" pin="37"/>
+    </net>
+    <net code="62" name="Net-(U$3-Pad38)">
+      <node ref="U$3" pin="38"/>
+    </net>
+    <net code="63" name="Net-(U$3-Pad39)">
+      <node ref="U$3" pin="39"/>
+    </net>
+    <net code="64" name="Net-(U$3-Pad4)">
+      <node ref="U$3" pin="4"/>
+    </net>
+    <net code="65" name="Net-(U$3-Pad40)">
+      <node ref="U$3" pin="40"/>
+    </net>
+    <net code="66" name="Net-(U$3-Pad3)">
+      <node ref="U$3" pin="3"/>
+    </net>
+    <net code="67" name="Net-(U$3-Pad45)">
+      <node ref="U$3" pin="45"/>
+    </net>
+    <net code="68" name="/TMS">
+      <node ref="U$3" pin="46"/>
+      <node ref="PROG1" pin="4"/>
+    </net>
+    <net code="69" name="/TCK">
+      <node ref="PROG1" pin="2"/>
+      <node ref="U$3" pin="49"/>
+    </net>
+    <net code="70" name="/CS">
+      <node ref="U$11" pin="5"/>
+      <node ref="U$3" pin="50"/>
+    </net>
+    <net code="71" name="/MISO">
+      <node ref="U$3" pin="52"/>
+      <node ref="U$11" pin="7"/>
+    </net>
+    <net code="72" name="/MOSI">
+      <node ref="U$11" pin="4"/>
+      <node ref="U$3" pin="53"/>
+    </net>
+    <net code="73" name="Net-(U$3-Pad54)">
+      <node ref="U$3" pin="54"/>
+    </net>
+    <net code="74" name="Net-(U$3-Pad10)">
+      <node ref="U$3" pin="10"/>
+    </net>
+    <net code="75" name="Net-(U$3-Pad11)">
+      <node ref="U$3" pin="11"/>
+    </net>
+    <net code="76" name="Net-(U$3-Pad15)">
+      <node ref="U$3" pin="15"/>
+    </net>
+    <net code="77" name="/USART_TX">
+      <node ref="PROG1" pin="6"/>
+      <node ref="U$3" pin="16"/>
+    </net>
+    <net code="78" name="Net-(U$3-Pad55)">
+      <node ref="U$3" pin="55"/>
+    </net>
+    <net code="79" name="3.3V">
+      <node ref="R5" pin="2"/>
+      <node ref="C31" pin="1"/>
+      <node ref="U$3" pin="19"/>
+      <node ref="VREFCAP1" pin="1"/>
+      <node ref="C18" pin="1"/>
+      <node ref="U$11" pin="13"/>
+      <node ref="U$6" pin="5"/>
+      <node ref="LDFM33PUR1" pin="1"/>
+      <node ref="U$3" pin="48"/>
+      <node ref="R3" pin="2"/>
+      <node ref="R4" pin="2"/>
+      <node ref="U$1" pin="26"/>
+      <node ref="C33" pin="1"/>
+      <node ref="C19" pin="1"/>
+      <node ref="C27" pin="1"/>
+      <node ref="C10" pin="1"/>
+      <node ref="C9" pin="1"/>
+      <node ref="CHOKE1" pin="1"/>
+      <node ref="C20" pin="1"/>
+      <node ref="PROG1" pin="1"/>
+      <node ref="U$3" pin="1"/>
+      <node ref="U$3" pin="64"/>
+      <node ref="U$3" pin="32"/>
+      <node ref="C32" pin="1"/>
+    </net>
+    <net code="80" name="Net-(U$3-Pad2)">
+      <node ref="U$3" pin="2"/>
+    </net>
+    <net code="81" name="Net-(U$3-Pad24)">
+      <node ref="U$3" pin="24"/>
+    </net>
+    <net code="82" name="Net-(U$3-Pad26)">
+      <node ref="U$3" pin="26"/>
+    </net>
+    <net code="83" name="Net-(U$3-Pad27)">
+      <node ref="U$3" pin="27"/>
+    </net>
+    <net code="84" name="Net-(U$3-Pad28)">
+      <node ref="U$3" pin="28"/>
+    </net>
+    <net code="85" name="Net-(U$3-Pad29)">
+      <node ref="U$3" pin="29"/>
+    </net>
+    <net code="86" name="/SPB">
+      <node ref="U$1" pin="14"/>
+      <node ref="Q4" pin="2"/>
+      <node ref="Q4" pin="1"/>
+      <node ref="Q4" pin="3"/>
+      <node ref="R6" pin="2"/>
+    </net>
+    <net code="87" name="/PHASA">
+      <node ref="U$1" pin="9"/>
+      <node ref="U$4" pin="P$1"/>
+      <node ref="Q1" pin="3"/>
+      <node ref="Q2" pin="7"/>
+      <node ref="Q2" pin="6"/>
+      <node ref="Q1" pin="2"/>
+      <node ref="Q2" pin="5"/>
+      <node ref="Q2" pin="8"/>
+      <node ref="Q2" pin="EP"/>
+      <node ref="Q1" pin="1"/>
+    </net>
+    <net code="88" name="Net-(U$3-Pad56)">
+      <node ref="U$3" pin="56"/>
+    </net>
+    <net code="89" name="Net-(U$3-Pad57)">
+      <node ref="U$3" pin="57"/>
+    </net>
+    <net code="90" name="/NRST">
+      <node ref="PROG1" pin="5"/>
+      <node ref="U$3" pin="7"/>
+    </net>
+    <net code="91" name="Net-(R26-Pad1)">
+      <node ref="U$3" pin="14"/>
+      <node ref="R26" pin="1"/>
+      <node ref="R27" pin="2"/>
+    </net>
+    <net code="92" name="Net-(C41-Pad1)">
+      <node ref="C41" pin="1"/>
+      <node ref="CHOKE1" pin="2"/>
+      <node ref="U$3" pin="13"/>
+    </net>
+    <net code="93" name="/GHA">
+      <node ref="Q1" pin="4"/>
+      <node ref="U$1" pin="8"/>
+    </net>
+    <net code="94" name="/USART_RX">
+      <node ref="U$3" pin="17"/>
+      <node ref="PROG1" pin="7"/>
+    </net>
+    <net code="95" name="/MCO">
+      <node ref="XT1" pin="1"/>
+      <node ref="U$3" pin="5"/>
+    </net>
+  </nets>
+</export>
