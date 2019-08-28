@@ -749,11 +749,11 @@ Wire Wire Line
 	3450 5700 3950 5700
 Connection ~ 3450 5700
 $Comp
-L Device:L 27uH1
+L Device:L L1
 U 1 1 5D680E8A
 P 4250 5700
-F 0 "27uH1" V 4100 5700 50  0000 C CNN
-F 1 "L" V 4200 5700 50  0000 C CNN
+F 0 "L1" V 4100 5700 50  0000 C CNN
+F 1 "27uH" V 4200 5700 50  0000 C CNN
 F 2 "Inductor_SMD:L_1210_3225Metric" H 4250 5700 50  0001 C CNN
 F 3 "~" H 4250 5700 50  0001 C CNN
 	1    4250 5700
@@ -1071,11 +1071,11 @@ F 3 "~" H 4900 1050 50  0001 C CNN
 	1    4900 1050
 	1    0    0    -1  
 $EndComp
-Text GLabel 4600 2050 0    50   Input ~ 0
+Text GLabel 4600 2100 0    50   Input ~ 0
 SOA
-Text GLabel 4600 2150 0    50   Input ~ 0
+Text GLabel 4600 2200 0    50   Input ~ 0
 SOB
-Text GLabel 4600 2250 0    50   Input ~ 0
+Text GLabel 4600 2300 0    50   Input ~ 0
 SOC
 Text GLabel 4600 1250 0    50   Input ~ 0
 INHA
@@ -1089,11 +1089,11 @@ Text GLabel 4600 950  0    50   Input ~ 0
 INLB
 Text GLabel 4600 750  0    50   Input ~ 0
 INLC
-Text GLabel 4600 1850 0    50   Input ~ 0
+Text GLabel 4600 1900 0    50   Input ~ 0
 SDO
-Text GLabel 4600 1750 0    50   Input ~ 0
+Text GLabel 4600 1800 0    50   Input ~ 0
 SDI
-Text GLabel 4600 1650 0    50   Input ~ 0
+Text GLabel 4600 1700 0    50   Input ~ 0
 SCLK
 Text GLabel 4600 1450 0    50   Input ~ 0
 ENABLE
@@ -1112,25 +1112,25 @@ Wire Wire Line
 Wire Wire Line
 	4600 1450 4700 1450
 Wire Wire Line
-	4600 1550 4700 1550
+	4600 1600 4700 1600
 Wire Wire Line
-	4600 1650 4700 1650
+	4600 1700 4700 1700
 Wire Wire Line
-	4600 1750 4700 1750
+	4600 1800 4700 1800
 Wire Wire Line
-	4600 1850 4700 1850
+	4600 1900 4700 1900
 Wire Wire Line
-	4600 1950 4700 1950
+	4600 2000 4700 2000
 Wire Wire Line
-	4600 2050 4700 2050
-Text GLabel 4600 1550 0    50   Input ~ 0
+	4600 2100 4700 2100
+Text GLabel 4600 1600 0    50   Input ~ 0
 nSCS
-Text GLabel 4600 1950 0    50   Input ~ 0
+Text GLabel 4600 2000 0    50   Input ~ 0
 nFAULT
 Wire Wire Line
-	4600 2150 4700 2150
+	4600 2200 4700 2200
 Wire Wire Line
-	4600 2250 4700 2250
+	4600 2300 4700 2300
 Text GLabel 4600 1350 0    50   Input ~ 0
 DVDD
 Wire Wire Line
@@ -1216,12 +1216,12 @@ Wire Wire Line
 $Comp
 L Connector:Conn_01x08_Female J4
 U 1 1 5D68CC07
-P 4900 1850
-F 0 "J4" H 4928 1826 50  0000 L CNN
-F 1 "Pinouts" H 4928 1735 50  0000 L CNN
-F 2 "Connector_PinSocket_2.54mm:PinSocket_1x08_P2.54mm_Vertical" H 4900 1850 50  0001 C CNN
-F 3 "~" H 4900 1850 50  0001 C CNN
-	1    4900 1850
+P 4900 1900
+F 0 "J4" H 4928 1876 50  0000 L CNN
+F 1 "Pinouts" H 4928 1785 50  0000 L CNN
+F 2 "Connector_PinSocket_2.54mm:PinSocket_1x08_P2.54mm_Vertical" H 4900 1900 50  0001 C CNN
+F 3 "~" H 4900 1900 50  0001 C CNN
+	1    4900 1900
 	1    0    0    -1  
 $EndComp
 $EndSCHEMATC
