@@ -1,7 +1,7 @@
 (export (version D)
   (design
     (source N:\Documents\OpenCauchy\electronics\actuator\actuator.sch)
-    (date "8/29/2019 9:45:30 PM")
+    (date "9/1/2019 11:05:02 AM")
     (tool "Eeschema (5.0.2)-1")
     (sheet (number 1) (name /) (tstamps /)
       (title_block
@@ -87,7 +87,7 @@
       (tstamp 5D5DAF6D))
     (comp (ref U1)
       (value drv8323rs)
-      (footprint Package_DFN_QFN:Texas_S-PVQFN-N48_EP5.15x5.15mm_ThermalVias)
+      (footprint actuator:Texas_S-PVQFN-N48_EP5.15x5.15mm_ThermalVias)
       (libsource (lib actuator-rescue) (part drv8323rs-custom_drv) (description ""))
       (sheetpath (names /) (tstamps /))
       (tstamp 5D5BEEB7))
