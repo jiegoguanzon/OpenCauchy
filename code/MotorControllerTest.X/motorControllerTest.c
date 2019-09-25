@@ -90,7 +90,7 @@ int main(void) {
         if (++state == 6)
             state = 0;
 
-        __delay_ms(5);
+        __delay_ms(500);
 
     }
 

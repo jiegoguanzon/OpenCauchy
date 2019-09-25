@@ -185,9 +185,9 @@ __CONFIG1
 .comment
  *(.comment)
 
-.debug_info       0x000000        0x31a
+.debug_info       0x000000        0x32c
  *(.debug_info)
- .debug_info      0x000000        0x31a build/default/production/motorControllerTest.o
+ .debug_info      0x000000        0x32c build/default/production/motorControllerTest.o
  *(.gnu.linkonce.wi.*)
 
 .debug_abbrev     0x000000         0xae
