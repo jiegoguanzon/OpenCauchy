@@ -4,12 +4,12 @@
     <logicalFolder name="HeaderFiles"
                    displayName="Header Files"
                    projectFiles="true">
-      <itemPath>../../../../../../Program Files (x86)/Microchip/xc16/v1.36/support/generic/h/libpic30.h</itemPath>
+      <itemPath>C:/Program Files (x86)/Microchip/xc16/v1.36/support/generic/h/libpic30.h</itemPath>
     </logicalFolder>
     <logicalFolder name="LinkerScript"
                    displayName="Linker Files"
                    projectFiles="true">
-      <itemPath>../../../../../../Program Files (x86)/Microchip/xc16/v1.36/support/PIC24F/gld/p24FJ64GB002.gld</itemPath>
+      <itemPath>C:/Program Files (x86)/Microchip/xc16/v1.36/support/PIC24F/gld/p24FJ64GB002.gld</itemPath>
     </logicalFolder>
     <logicalFolder name="SourceFiles"
                    displayName="Source Files"
@@ -25,6 +25,8 @@
   <sourceRootList>
     <Elem>../../../../../../Program Files (x86)/Microchip/xc16/v1.36/support/generic/h</Elem>
     <Elem>../../../../../../Program Files (x86)/Microchip/xc16/v1.36/support/PIC24F/gld</Elem>
+    <Elem>C:/Program Files (x86)/Microchip/xc16/v1.36/support/PIC24F/gld</Elem>
+    <Elem>C:/Program Files (x86)/Microchip/xc16/v1.36/support/generic/h</Elem>
   </sourceRootList>
   <projectmakefile>Makefile</projectmakefile>
   <confs>

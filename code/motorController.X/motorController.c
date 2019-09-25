@@ -9,6 +9,7 @@
 
 #include "xc.h"
 #include "libpic30.h"
+#include "headers/spi.h"
 
 #pragma config FWDTEN = OFF
 #pragma config JTAGEN = OFF
@@ -27,7 +28,7 @@
 #define INHC    _LATB1
 #define INLC    _LATB0
 
-int main(void) {
+int main (void) {
 
     TRISA = 0xFFFF;
     TRISB = 0xFFFF;

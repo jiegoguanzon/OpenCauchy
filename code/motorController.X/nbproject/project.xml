@@ -15,6 +15,8 @@
             <sourceRootList>
                 <sourceRootElem>../../../../../../Program Files (x86)/Microchip/xc16/v1.36/support/generic/h</sourceRootElem>
                 <sourceRootElem>../../../../../../Program Files (x86)/Microchip/xc16/v1.36/support/PIC24F/gld</sourceRootElem>
+                <sourceRootElem>C:/Program Files (x86)/Microchip/xc16/v1.36/support/PIC24F/gld</sourceRootElem>
+                <sourceRootElem>C:/Program Files (x86)/Microchip/xc16/v1.36/support/generic/h</sourceRootElem>
             </sourceRootList>
             <confList>
                 <confElem>
