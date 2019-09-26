@@ -3,7 +3,7 @@
 #include "xc.h"
 #include "libpic30.h"
 
-#define SPI_SS      _LATB10
+#define SPI_SS      _LATB13
 
 #define SPI_WRITE   0
 #define SPI_READ    1
@@ -17,7 +17,9 @@
 
 void spi_init () {
 
-    _TRISB10 = 0;   // Set Slave Select (SS) pin as output
+    _SPIEN = 0;
+
+    _TRISB13 = 0;   // Set Slave Select (SS) pin as output
     SPI_SS = 1;    // Disable SS
 
     SPI1STAT = 0;   // Clear SPI1 Status Register
@@ -37,41 +39,128 @@ void spi_init () {
 
     // 4:1 Secondary Prescaler
     _SPRE2 = 1;
-    _SPRE1 = 0;
-    _SPRE0 = 0;
+    _SPRE1 = 1;
+    _SPRE0 = 1;
 
     _SPIROV = 0;    // Clear overflow flag
 
     __builtin_write_OSCCONL(OSCCON & 0xBF);
     _RP7R = 8;  // SPI1 Clock Output to RB7/RP7
-    _SDI1R = 8; // SPI1 Data Input to RB8/RP8
-    _RP9R = 7;  // SPI1 Data Output to RB9/RP9
+    _SDI1R = 5; // SPI1 Data Input to RA0/RP5
+    _RP6R = 7;  // SPI1 Data Output to RA1/RP6
     __builtin_write_OSCCONL(OSCCON | 0x40);
 
     _SPIEN = 1; // Enable SPI1 module
+    __delay_ms(5);
 
 }
 
-uint16_t spi_write (uint8_t addr, uint16_t data) {
-
-    SPI_SS = 0;    
-    SPI1BUF = 0 + (addr << 11) + (data & 0x7FF);
-    while (!_SPI1RBF);
-    SPI_SS = 1;
-    
-    return SPI1BUF;
-
+uint16_t spi_generate_frame (uint8_t op, uint8_t addr, uint16_t data) {
+    return (op << 15) + (addr << 11) + data;
 }
 
-uint16_t spi_read (uint8_t addr) {
+uint16_t spi_transfer (uint16_t frame) {
 
+    __delay_ms(1);
     SPI_SS = 0;
-    SPI1BUF = 1 + (addr << 14);
-    while (!_SPI1RBF);
-    SPI1BUF = 1 + (addr << 14);
-    while (!_SPI1RBF);
+    __delay_us(500)
+
+    while (_SPITBF);
+    SPI1BUF = frame;
+    while (!_SPIRBF);
+
+    __delay_us(500)
     SPI_SS = 1;
+    __delay_ms(1);
 
     return SPI1BUF;
 
+}
+
+void spi_change_pwm_mode (uint8_t mode) {
+
+    uint16_t data = 0;
+    uint16_t frame = 0;
+
+    frame = spi_generate_frame(SPI_READ, 0x2, 0x0);
+    data = spi_transfer(frame);
+    frame = spi_generate_frame(SPI_WRITE, 0x2, (data & 0xFF9F) + (mode << 5));
+    spi_transfer(frame);
+
+}
+
+void spi_lock_registers () {
+
+    uint16_t data = 0;
+    uint16_t frame = 0;
+
+    frame = spi_generate_frame(SPI_READ, 0x2, 0x0);
+    data = spi_transfer(frame);
+    frame = spi_generate_frame(SPI_WRITE, 0x2, (data & 0xF8FF) + (6 << 8));
+    spi_transfer(frame);
+
+}
+
+void spi_unlock_registers () {
+
+    uint16_t data = 0;
+    uint16_t frame = 0;
+
+    frame = spi_generate_frame(SPI_READ, 0x2, 0x0);
+    data = spi_transfer(frame);
+    frame = spi_generate_frame(SPI_WRITE, 0x2, (data & 0xF8FF) + (3 << 8));
+    spi_transfer(frame);
+
+}
+
+void spi_change_hs_peak_source_gate_current (uint8_t mode) {
+
+    uint16_t data = 0;
+    uint16_t frame = 0;
+
+    frame = spi_generate_frame(SPI_READ, 0x3, 0x0);
+    data = spi_transfer(frame);
+    frame = spi_generate_frame(SPI_WRITE, 0x3, (data & 0xFF0F) + (mode << 4));
+    spi_transfer(frame);
+
+}
+
+void spi_change_hs_peak_sink_gate_current (uint8_t mode) {
+
+    uint16_t data = 0;
+    uint16_t frame = 0;
+
+    frame = spi_generate_frame(SPI_READ, 0x3, 0x0);
+    data = spi_transfer(frame);
+    frame = spi_generate_frame(SPI_WRITE, 0x3, (data & 0xFFF0) + mode);
+    spi_transfer(frame);
+
+}
+
+void spi_change_ls_peak_source_gate_current (uint8_t mode) {
+
+    uint16_t data = 0;
+    uint16_t frame = 0;
+
+    frame = spi_generate_frame(SPI_READ, 0x4, 0x0);
+    data = spi_transfer(frame);
+    frame = spi_generate_frame(SPI_WRITE, 0x4, (data & 0xFF0F) + (mode << 4));
+    spi_transfer(frame);
+
+}
+
+void spi_change_ls_peak_sink_gate_current (uint8_t mode) {
+
+    uint16_t data = 0;
+    uint16_t frame = 0;
+
+    frame = spi_generate_frame(SPI_READ, 0x4, 0x0);
+    data = spi_transfer(frame);
+    frame = spi_generate_frame(SPI_WRITE, 0x4, (data & 0xFFF0) + mode);
+    spi_transfer(frame);
+
+}
+
+void __attribute__((interrupt, no_auto_psv)) _SPI1Interrupt (void) {
+    _SPI1IF = 0;
 }
