@@ -36,8 +36,8 @@ uint8_t timer;
 uint8_t state;
 
 uint16_t time_elapsed = 0;
-uint16_t time_limit = 500;
-uint8_t time_limit_min = 50;
+uint16_t time_limit = 1000;
+uint16_t time_limit_min = 50;
 uint8_t time_elapsed_delta_v = 0;
 uint8_t time_limit_delta_v = 200;
 
@@ -53,7 +53,7 @@ void __attribute__((interrupt, no_auto_psv)) _T1Interrupt (void) {
     if (time_elapsed_delta_v >= time_limit_delta_v) {
         if (--time_limit <= time_limit_min) {
             time_limit = time_limit_min;
-            //handoff = 1;
+            handoff = 1;
         }
         time_elapsed_delta_v = 0;
     }
@@ -118,8 +118,8 @@ void T1_init(){
 
     PR1 = 200;
 
-    _TRISB15 = 0;
-    _LATB15 = 0;
+    //_TRISB15 = 0;
+    //_LATB15 = 0;
     timer = 0;
 
     _T1IE = 1;
@@ -140,14 +140,14 @@ int main (void) {
     LCD_init();
     spi_init();
 
-    INHA = INHB = INHC = 0;
-    INLA = INLB = INLC = 0;
-
     spi_change_hs_peak_source_gate_current(3);
     spi_change_hs_peak_sink_gate_current(3);
     spi_change_ls_peak_source_gate_current(3);
     spi_change_ls_peak_sink_gate_current(3);
-    spi_change_pwm_mode(1);
+    //spi_change_pwm_mode(1);
+
+    INHA = INHB = INHC = 0;
+    INLA = INLB = INLC = 0;
 
     frame = spi_generate_frame(SPI_READ, 0x2, 0x0);
     data = spi_transfer(frame);
@@ -158,28 +158,52 @@ int main (void) {
     sprintf(str, "Data: 0x%04x", data);
     LCD_send_string(str);
 
-    LCD_cursor_third_line();
-    LCD_send_string("Starting motor.");
-    __delay_ms(1000);
-    LCD_send_character('.');
-    __delay_ms(1000);
-    LCD_send_character('.');
-    __delay_ms(1000);
-    LCD_cursor_fourth_line();
-    LCD_send_string("Motor started.");
-
     state = 1;
-    _TRISB15 = 0;
-    _LATB15 = 0;
-    T1_init();
+    _TRISB15 = 1;
+    //_LATB15 = 0;
+
+    uint8_t go = 0;
 
     while (1) {
+
+        while (go == 0) {
+            if (_RB15)
+                go++;
+        }
+
+        if (go == 1) {
+            go++;
+            LCD_cursor_third_line();
+            LCD_send_string("Starting motor.");
+            __delay_ms(1000);
+            LCD_send_character('.');
+            __delay_ms(1000);
+            LCD_send_character('.');
+            __delay_ms(1000);
+            LCD_cursor_fourth_line();
+            LCD_send_string("Motor started.");
+            T1_init();
+        }
+
+        /*
+        if (_RB15) {
+            INLA = 0;
+            INHA = 0;
+            INLB = 0;
+            INHB = 0;
+            INLC = 0;
+            INHC = 0;
+            break;
+        }
+        */
+
 
         if (time_elapsed >= time_limit) {
             time_elapsed = 0;
 
             switch (state) {
 
+                /*
                 case 1:
                     INLA = 1;
                     INHA = 1;
@@ -228,6 +252,56 @@ int main (void) {
                     INLC = 1;
                     INHC = 1;
                     break;
+                */
+                
+                case 1:
+                    INHA = 1;
+                    INLA = 0;
+                    INHB = 0;
+                    INLB = 1;
+                    INHC = 0;
+                    INLC = 0;
+                    break;
+                case 2:
+                    INHA = 1;
+                    INLA = 0;
+                    INHB = 0;
+                    INLB = 0;
+                    INHC = 0;
+                    INLC = 1;
+                    break;
+                case 3:
+                    INHA = 0;
+                    INLA = 0;
+                    INHB = 1;
+                    INLB = 0;
+                    INHC = 0;
+                    INLC = 1;
+                    break;
+                case 4:
+                    INHA = 0;
+                    INLA = 1;
+                    INHB = 1;
+                    INLB = 0;
+                    INHC = 0;
+                    INLC = 0;
+                    break;
+                case 5:
+                    INHA = 0;
+                    INLA = 1;
+                    INHB = 0;
+                    INLB = 0;
+                    INHC = 1;
+                    INLC = 0;
+                    break;
+                case 6:
+                    INHA = 0;
+                    INLA = 0;
+                    INHB = 0;
+                    INLB = 1;
+                    INHC = 1;
+                    INLC = 0;
+                    break;
                     
             }
 
@@ -239,6 +313,9 @@ int main (void) {
         }
 
     }
+
+    __delay_ms(1000);
+    while (!_RB15);
 
     return 0;
 

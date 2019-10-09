@@ -84,13 +84,13 @@ xc16-ld 1.36 (A)
 
 section                    address   length (PC units)   length (bytes) (dec)
 -------                    -------   -----------------   --------------------
-.text                        0x200               0xcb6          0x1311  (4881)
-.const                       0xeb6                0x3a            0x57  (87)
-.text                        0xef0               0x620           0x930  (2352)
-.dinit                      0x1510                0x48            0x6c  (108)
-.init.delay32               0x1558                0x1c            0x2a  (42)
+.text                        0x200               0xcb4          0x130e  (4878)
+.const                       0xeb4                0x3a            0x57  (87)
+.text                        0xeee               0x632           0x94b  (2379)
+.dinit                      0x1520                0x48            0x6c  (108)
+.init.delay32               0x1568                0x1c            0x2a  (42)
 
-                 Total "program" memory used (bytes):         0x1d2e  (7470) 11%
+                 Total "program" memory used (bytes):         0x1d46  (7494) 11%
 
 
 "data" Memory  [Origin = 0x800, Length = 0x2000]
@@ -98,10 +98,10 @@ section                    address   length (PC units)   length (bytes) (dec)
 section                    address      alignment gaps    total length  (dec)
 -------                    -------      --------------    -------------------
 .nbss                        0x800                   0             0xc  (12)
-.ndata                       0x80c                   0             0x4  (4)
-.data                        0x810                   0            0x3c  (60)
+.ndata                       0x80c                   0             0x6  (6)
+.data                        0x812                   0            0x3c  (60)
 
-                 Total "data" memory used (bytes):           0x4c  (76) <1%
+                 Total "data" memory used (bytes):           0x4e  (78) <1%
 
 
 Dynamic Memory Usage
@@ -109,9 +109,9 @@ Dynamic Memory Usage
 region                     address                      maximum length  (dec)
 ------                     -------                      ---------------------
 heap                             0                                   0  (0)
-stack                        0x84c                              0x1fb4  (8116)
+stack                        0x84e                              0x1fb2  (8114)
 
-                 Maximum dynamic memory (bytes):         0x1fb4  (8116)
+                 Maximum dynamic memory (bytes):         0x1fb2  (8114)
 
 
 External Symbols in Data Memory (by address):
@@ -128,7 +128,7 @@ External Symbols in Data Memory (by address):
                     0x080b                  _handoff
                     0x080c                  _time_limit
                     0x080e                  _time_limit_min
-                    0x080f                  _time_limit_delta_v
+                    0x0810                  _time_limit_delta_v
 
 External Symbols in Data Memory (by name):
 
@@ -142,7 +142,7 @@ External Symbols in Data Memory (by name):
                     0x0808                  _time_elapsed
                     0x080a                  _time_elapsed_delta_v
                     0x080c                  _time_limit
-                    0x080f                  _time_limit_delta_v
+                    0x0810                  _time_limit_delta_v
                     0x080e                  _time_limit_min
                     0x0805                  _timer
 
@@ -154,119 +154,119 @@ External Symbols in Program Memory (by address):
                   0x000252                  __data_init
                   0x0002cc                  __SPI1Interrupt
                   0x0002d4                  __T1Interrupt
-                  0x0004b4                  __DefaultInterrupt
-                  0x0004ba                  sprintf_cdnopuxX.XXeo:_prout
-                  0x0004c8                  __sprintf_cdnopuxX
-                  0x0004e6                  ___Printf_cdnopuxX
-                  0x00064a                  _memcpy
-                  0x000658                  _strchr
-                  0x000670                  __Puttxt
-                  0x0007e8                  __Vacopy
-                  0x0007ec                  ___Putfld_cdnopuxX
-                  0x000a10                  __Litob
-                  0x000c6e                  ___divsi3
-                  0x000c8c                  ___udivsi3
-                  0x000cac                  ___umodsi3
-                  0x000cfe                  ___udivmoddi3
-                  0x000de4                  ___udivdi3
-                  0x000df2                  ___umoddi3
-                  0x000dfa                  ___divdi3
-                  0x000e5a                  ___moddi3
-                  0x000ef0                  _spi_init
-                  0x000f62                  _spi_generate_frame
-                  0x000f80                  _spi_transfer
-                  0x000fbe                  _spi_change_pwm_mode
-                  0x000ff8                  _spi_lock_registers
-                  0x00102c                  _spi_unlock_registers
-                  0x00105e                  _spi_change_hs_peak_source_gate_current
-                  0x001098                  _spi_change_hs_peak_sink_gate_current
-                  0x0010d0                  _spi_change_ls_peak_source_gate_current
-                  0x00110a                  _spi_change_ls_peak_sink_gate_current
-                  0x001142                  _I2C_init
-                  0x001152                  _I2C_start
-                  0x001166                  _I2C_restart
-                  0x00117a                  _I2C_stop
-                  0x00118c                  _I2C_ack
-                  0x001198                  _I2C_nack
-                  0x0011a8                  _I2C_write
-                  0x0011c8                  _I2C_read
-                  0x0011e2                  _LCD_send8bits
-                  0x001234                  _LCD_init
-                  0x00127e                  _LCD_send_character
-                  0x00128c                  _LCD_send_string
-                  0x0012a6                  _LCD_clear
-                  0x0012b8                  _LCD_cursor_first_line
-                  0x0012c4                  _LCD_cursor_second_line
-                  0x0012d0                  _LCD_cursor_third_line
-                  0x0012dc                  _LCD_cursor_fourth_line
-                  0x0012e8                  _LCD_hide_cursor
-                  0x0012f4                  _LCD_show_cursor
-                  0x001300                  _LCD_position_cursor
-                  0x001334                  _LCD_store_character
-                  0x00136a                  _T1_init
-                  0x00138e                  _main
-                  0x001558                  ___delay32
+                  0x0004b2                  __DefaultInterrupt
+                  0x0004b8                  sprintf_cdnopuxX.XXeo:_prout
+                  0x0004c6                  __sprintf_cdnopuxX
+                  0x0004e4                  ___Printf_cdnopuxX
+                  0x000648                  _memcpy
+                  0x000656                  _strchr
+                  0x00066e                  __Puttxt
+                  0x0007e6                  __Vacopy
+                  0x0007ea                  ___Putfld_cdnopuxX
+                  0x000a0e                  __Litob
+                  0x000c6c                  ___divsi3
+                  0x000c8a                  ___udivsi3
+                  0x000caa                  ___umodsi3
+                  0x000cfc                  ___udivmoddi3
+                  0x000de2                  ___udivdi3
+                  0x000df0                  ___umoddi3
+                  0x000df8                  ___divdi3
+                  0x000e58                  ___moddi3
+                  0x000eee                  _spi_init
+                  0x000f60                  _spi_generate_frame
+                  0x000f7e                  _spi_transfer
+                  0x000fbc                  _spi_change_pwm_mode
+                  0x000ff6                  _spi_lock_registers
+                  0x00102a                  _spi_unlock_registers
+                  0x00105c                  _spi_change_hs_peak_source_gate_current
+                  0x001096                  _spi_change_hs_peak_sink_gate_current
+                  0x0010ce                  _spi_change_ls_peak_source_gate_current
+                  0x001108                  _spi_change_ls_peak_sink_gate_current
+                  0x001140                  _I2C_init
+                  0x001150                  _I2C_start
+                  0x001164                  _I2C_restart
+                  0x001178                  _I2C_stop
+                  0x00118a                  _I2C_ack
+                  0x001196                  _I2C_nack
+                  0x0011a6                  _I2C_write
+                  0x0011c6                  _I2C_read
+                  0x0011e0                  _LCD_send8bits
+                  0x001232                  _LCD_init
+                  0x00127c                  _LCD_send_character
+                  0x00128a                  _LCD_send_string
+                  0x0012a4                  _LCD_clear
+                  0x0012b6                  _LCD_cursor_first_line
+                  0x0012c2                  _LCD_cursor_second_line
+                  0x0012ce                  _LCD_cursor_third_line
+                  0x0012da                  _LCD_cursor_fourth_line
+                  0x0012e6                  _LCD_hide_cursor
+                  0x0012f2                  _LCD_show_cursor
+                  0x0012fe                  _LCD_position_cursor
+                  0x001332                  _LCD_store_character
+                  0x001368                  _T1_init
+                  0x001388                  _main
+                  0x001568                  ___delay32
 
 External Symbols in Program Memory (by name):
 
-                  0x00118c                  _I2C_ack
-                  0x001142                  _I2C_init
-                  0x001198                  _I2C_nack
-                  0x0011c8                  _I2C_read
-                  0x001166                  _I2C_restart
-                  0x001152                  _I2C_start
-                  0x00117a                  _I2C_stop
-                  0x0011a8                  _I2C_write
-                  0x0012a6                  _LCD_clear
-                  0x0012b8                  _LCD_cursor_first_line
-                  0x0012dc                  _LCD_cursor_fourth_line
-                  0x0012c4                  _LCD_cursor_second_line
-                  0x0012d0                  _LCD_cursor_third_line
-                  0x0012e8                  _LCD_hide_cursor
-                  0x001234                  _LCD_init
-                  0x001300                  _LCD_position_cursor
-                  0x0011e2                  _LCD_send8bits
-                  0x00127e                  _LCD_send_character
-                  0x00128c                  _LCD_send_string
-                  0x0012f4                  _LCD_show_cursor
-                  0x001334                  _LCD_store_character
-                  0x00136a                  _T1_init
-                  0x0004b4                  __DefaultInterrupt
-                  0x000a10                  __Litob
-                  0x000670                  __Puttxt
+                  0x00118a                  _I2C_ack
+                  0x001140                  _I2C_init
+                  0x001196                  _I2C_nack
+                  0x0011c6                  _I2C_read
+                  0x001164                  _I2C_restart
+                  0x001150                  _I2C_start
+                  0x001178                  _I2C_stop
+                  0x0011a6                  _I2C_write
+                  0x0012a4                  _LCD_clear
+                  0x0012b6                  _LCD_cursor_first_line
+                  0x0012da                  _LCD_cursor_fourth_line
+                  0x0012c2                  _LCD_cursor_second_line
+                  0x0012ce                  _LCD_cursor_third_line
+                  0x0012e6                  _LCD_hide_cursor
+                  0x001232                  _LCD_init
+                  0x0012fe                  _LCD_position_cursor
+                  0x0011e0                  _LCD_send8bits
+                  0x00127c                  _LCD_send_character
+                  0x00128a                  _LCD_send_string
+                  0x0012f2                  _LCD_show_cursor
+                  0x001332                  _LCD_store_character
+                  0x001368                  _T1_init
+                  0x0004b2                  __DefaultInterrupt
+                  0x000a0e                  __Litob
+                  0x00066e                  __Puttxt
                   0x0002cc                  __SPI1Interrupt
                   0x0002d4                  __T1Interrupt
-                  0x0007e8                  __Vacopy
-                  0x0004e6                  ___Printf_cdnopuxX
-                  0x0007ec                  ___Putfld_cdnopuxX
-                  0x001558                  ___delay32
-                  0x000dfa                  ___divdi3
-                  0x000c6e                  ___divsi3
-                  0x000e5a                  ___moddi3
-                  0x000de4                  ___udivdi3
-                  0x000cfe                  ___udivmoddi3
-                  0x000c8c                  ___udivsi3
-                  0x000df2                  ___umoddi3
-                  0x000cac                  ___umodsi3
+                  0x0007e6                  __Vacopy
+                  0x0004e4                  ___Printf_cdnopuxX
+                  0x0007ea                  ___Putfld_cdnopuxX
+                  0x001568                  ___delay32
+                  0x000df8                  ___divdi3
+                  0x000c6c                  ___divsi3
+                  0x000e58                  ___moddi3
+                  0x000de2                  ___udivdi3
+                  0x000cfc                  ___udivmoddi3
+                  0x000c8a                  ___udivsi3
+                  0x000df0                  ___umoddi3
+                  0x000caa                  ___umodsi3
                   0x000252                  __data_init
                   0x000252                  __data_init_standard
                   0x00023c                  __psv_init
                   0x000200                  __resetPRI
-                  0x0004c8                  __sprintf_cdnopuxX
-                  0x00138e                  _main
-                  0x00064a                  _memcpy
-                  0x001098                  _spi_change_hs_peak_sink_gate_current
-                  0x00105e                  _spi_change_hs_peak_source_gate_current
-                  0x00110a                  _spi_change_ls_peak_sink_gate_current
-                  0x0010d0                  _spi_change_ls_peak_source_gate_current
-                  0x000fbe                  _spi_change_pwm_mode
-                  0x000f62                  _spi_generate_frame
-                  0x000ef0                  _spi_init
-                  0x000ff8                  _spi_lock_registers
-                  0x000f80                  _spi_transfer
-                  0x00102c                  _spi_unlock_registers
-                  0x000658                  _strchr
-                  0x0004ba                  sprintf_cdnopuxX.XXeo:_prout
+                  0x0004c6                  __sprintf_cdnopuxX
+                  0x001388                  _main
+                  0x000648                  _memcpy
+                  0x001096                  _spi_change_hs_peak_sink_gate_current
+                  0x00105c                  _spi_change_hs_peak_source_gate_current
+                  0x001108                  _spi_change_ls_peak_sink_gate_current
+                  0x0010ce                  _spi_change_ls_peak_source_gate_current
+                  0x000fbc                  _spi_change_pwm_mode
+                  0x000f60                  _spi_generate_frame
+                  0x000eee                  _spi_init
+                  0x000ff6                  _spi_lock_registers
+                  0x000f7e                  _spi_transfer
+                  0x00102a                  _spi_unlock_registers
+                  0x000656                  _strchr
+                  0x0004b8                  sprintf_cdnopuxX.XXeo:_prout
 
 Memory Configuration
 
@@ -307,7 +307,7 @@ LOAD c:/program files (x86)/microchip/xc16/v1.36/bin/bin/../../lib\libfx-elf.a
                   0x000002          0x2 SHORT 0x0 ((ABSOLUTE (__reset) >> 0x10) & 0x7f)
                   0x000003          0x2 SHORT 0x0
 
-.text             0x000200        0xcb6
+.text             0x000200        0xcb4
  *(.init)
  .init            0x000200         0x4c c:/program files (x86)/microchip/xc16/v1.36/bin/bin/../../lib\liblega-pic30-elf.a(crt0_standard.o)
                   0x000200                  __resetPRI
@@ -319,65 +319,65 @@ LOAD c:/program files (x86)/microchip/xc16/v1.36/bin/bin/../../lib\libfx-elf.a
  *(.user_init)
  *(.handle)
  *(.isr*)
- .isr.text        0x0002cc        0x1e8 build/default/production/motorController.o
+ .isr.text        0x0002cc        0x1e6 build/default/production/motorController.o
                   0x0002cc                  __SPI1Interrupt
                   0x0002d4                  __T1Interrupt
- .isr             0x0004b4          0x4 default_isr
-                  0x0004b4                  __DefaultInterrupt
+ .isr             0x0004b2          0x4 default_isr
+                  0x0004b2                  __DefaultInterrupt
  *(.libc)
  *(.libm)
  *(.libdsp)
  *(.lib*)
  .libpic30_crt_start_mode
-                  0x0004b8          0x2 c:/program files (x86)/microchip/xc16/v1.36/bin/bin/../../lib\liblega-pic30-elf.a(crt_start_mode_normal.Leo)
-                  0x0004b8                  __crt_start_mode
-                  0x0004b8                  __crt_start_mode_normal
- .libc.prout      0x0004ba          0xe c:/program files (x86)/microchip/xc16/v1.36/bin/bin/../../lib\liblega-c-elf.a(sprintf_cdnopuxX.XXeo)
-                  0x0004ba                  sprintf_cdnopuxX.XXeo:_prout
+                  0x0004b6          0x2 c:/program files (x86)/microchip/xc16/v1.36/bin/bin/../../lib\liblega-pic30-elf.a(crt_start_mode_normal.Leo)
+                  0x0004b6                  __crt_start_mode
+                  0x0004b6                  __crt_start_mode_normal
+ .libc.prout      0x0004b8          0xe c:/program files (x86)/microchip/xc16/v1.36/bin/bin/../../lib\liblega-c-elf.a(sprintf_cdnopuxX.XXeo)
+                  0x0004b8                  sprintf_cdnopuxX.XXeo:_prout
  .libc._sprintf_cdnopuxX
-                  0x0004c8         0x1e c:/program files (x86)/microchip/xc16/v1.36/bin/bin/../../lib\liblega-c-elf.a(sprintf_cdnopuxX.XXeo)
-                  0x0004c8                  __sprintf_cdnopuxX
+                  0x0004c6         0x1e c:/program files (x86)/microchip/xc16/v1.36/bin/bin/../../lib\liblega-c-elf.a(sprintf_cdnopuxX.XXeo)
+                  0x0004c6                  __sprintf_cdnopuxX
  .libc.__Printf_cdnopuxX
-                  0x0004e6        0x164 c:/program files (x86)/microchip/xc16/v1.36/bin/bin/../../lib\liblega-c-elf.a(xprintf_cdnopuxX.XXeo)
-                  0x0004e6                  ___Printf_cdnopuxX
- .libc.memcpy     0x00064a          0xe c:/program files (x86)/microchip/xc16/v1.36/bin/bin/../../lib\liblega-c-elf.a(memcpy.XX_eo)
-                  0x00064a                  _memcpy
- .libc.strchr     0x000658         0x18 c:/program files (x86)/microchip/xc16/v1.36/bin/bin/../../lib\liblega-c-elf.a(strchr.XX_eo)
-                  0x000658                  _strchr
- .libc._Puttxt    0x000670        0x178 c:/program files (x86)/microchip/xc16/v1.36/bin/bin/../../lib\liblega-c-elf.a(xputtxt.XX_eo)
-                  0x000670                  __Puttxt
- .libc._Vacopy    0x0007e8          0x4 c:/program files (x86)/microchip/xc16/v1.36/bin/bin/../../lib\liblega-c-elf.a(xvacopy.XX_eo)
-                  0x0007e8                  __Vacopy
+                  0x0004e4        0x164 c:/program files (x86)/microchip/xc16/v1.36/bin/bin/../../lib\liblega-c-elf.a(xprintf_cdnopuxX.XXeo)
+                  0x0004e4                  ___Printf_cdnopuxX
+ .libc.memcpy     0x000648          0xe c:/program files (x86)/microchip/xc16/v1.36/bin/bin/../../lib\liblega-c-elf.a(memcpy.XX_eo)
+                  0x000648                  _memcpy
+ .libc.strchr     0x000656         0x18 c:/program files (x86)/microchip/xc16/v1.36/bin/bin/../../lib\liblega-c-elf.a(strchr.XX_eo)
+                  0x000656                  _strchr
+ .libc._Puttxt    0x00066e        0x178 c:/program files (x86)/microchip/xc16/v1.36/bin/bin/../../lib\liblega-c-elf.a(xputtxt.XX_eo)
+                  0x00066e                  __Puttxt
+ .libc._Vacopy    0x0007e6          0x4 c:/program files (x86)/microchip/xc16/v1.36/bin/bin/../../lib\liblega-c-elf.a(xvacopy.XX_eo)
+                  0x0007e6                  __Vacopy
  .libc.__Putfld_cdnopuxX
-                  0x0007ec        0x224 c:/program files (x86)/microchip/xc16/v1.36/bin/bin/../../lib\liblega-c-elf.a(xputfld_cdnopuxX.XXeo)
-                  0x0007ec                  ___Putfld_cdnopuxX
- .libc._Litob     0x000a10        0x25e c:/program files (x86)/microchip/xc16/v1.36/bin/bin/../../lib\liblega-c-elf.a(xlitob.XX_eo)
-                  0x000a10                  __Litob
- .libm.divsi3     0x000c6e         0x1e c:/program files (x86)/microchip/xc16/v1.36/bin/bin/../../lib\libm-elf.a(divsi3.eo)
-                  0x000c6e                  ___divsi3
- .libm.udivsi3    0x000c8c         0x20 c:/program files (x86)/microchip/xc16/v1.36/bin/bin/../../lib\libm-elf.a(udivsi3.eo)
-                  0x000c8c                  ___udivsi3
- .libm.umodsi3    0x000cac          0x6 c:/program files (x86)/microchip/xc16/v1.36/bin/bin/../../lib\libm-elf.a(umodsi3.eo)
-                  0x000cac                  ___umodsi3
+                  0x0007ea        0x224 c:/program files (x86)/microchip/xc16/v1.36/bin/bin/../../lib\liblega-c-elf.a(xputfld_cdnopuxX.XXeo)
+                  0x0007ea                  ___Putfld_cdnopuxX
+ .libc._Litob     0x000a0e        0x25e c:/program files (x86)/microchip/xc16/v1.36/bin/bin/../../lib\liblega-c-elf.a(xlitob.XX_eo)
+                  0x000a0e                  __Litob
+ .libm.divsi3     0x000c6c         0x1e c:/program files (x86)/microchip/xc16/v1.36/bin/bin/../../lib\libm-elf.a(divsi3.eo)
+                  0x000c6c                  ___divsi3
+ .libm.udivsi3    0x000c8a         0x20 c:/program files (x86)/microchip/xc16/v1.36/bin/bin/../../lib\libm-elf.a(udivsi3.eo)
+                  0x000c8a                  ___udivsi3
+ .libm.umodsi3    0x000caa          0x6 c:/program files (x86)/microchip/xc16/v1.36/bin/bin/../../lib\libm-elf.a(umodsi3.eo)
+                  0x000caa                  ___umodsi3
  .libm.__PplusBdi
-                  0x000cb2         0x26 c:/program files (x86)/microchip/xc16/v1.36/bin/bin/../../lib\libm-elf.a(divmoddi3.eo)
+                  0x000cb0         0x26 c:/program files (x86)/microchip/xc16/v1.36/bin/bin/../../lib\libm-elf.a(divmoddi3.eo)
  .libm.__PminusBdi
-                  0x000cd8         0x26 c:/program files (x86)/microchip/xc16/v1.36/bin/bin/../../lib\libm-elf.a(divmoddi3.eo)
+                  0x000cd6         0x26 c:/program files (x86)/microchip/xc16/v1.36/bin/bin/../../lib\libm-elf.a(divmoddi3.eo)
  .libm.__udivmoddi3
-                  0x000cfe         0xe6 c:/program files (x86)/microchip/xc16/v1.36/bin/bin/../../lib\libm-elf.a(divmoddi3.eo)
-                  0x000cfe                  ___udivmoddi3
+                  0x000cfc         0xe6 c:/program files (x86)/microchip/xc16/v1.36/bin/bin/../../lib\libm-elf.a(divmoddi3.eo)
+                  0x000cfc                  ___udivmoddi3
  .libm.__udivdi3
-                  0x000de4          0xe c:/program files (x86)/microchip/xc16/v1.36/bin/bin/../../lib\libm-elf.a(divmoddi3.eo)
-                  0x000de4                  ___udivdi3
+                  0x000de2          0xe c:/program files (x86)/microchip/xc16/v1.36/bin/bin/../../lib\libm-elf.a(divmoddi3.eo)
+                  0x000de2                  ___udivdi3
  .libm.__umoddi3
-                  0x000df2          0x8 c:/program files (x86)/microchip/xc16/v1.36/bin/bin/../../lib\libm-elf.a(divmoddi3.eo)
-                  0x000df2                  ___umoddi3
+                  0x000df0          0x8 c:/program files (x86)/microchip/xc16/v1.36/bin/bin/../../lib\libm-elf.a(divmoddi3.eo)
+                  0x000df0                  ___umoddi3
  .libm.__divdi3
-                  0x000dfa         0x60 c:/program files (x86)/microchip/xc16/v1.36/bin/bin/../../lib\libm-elf.a(divmoddi3.eo)
-                  0x000dfa                  ___divdi3
+                  0x000df8         0x60 c:/program files (x86)/microchip/xc16/v1.36/bin/bin/../../lib\libm-elf.a(divmoddi3.eo)
+                  0x000df8                  ___divdi3
  .libm.__moddi3
-                  0x000e5a         0x5c c:/program files (x86)/microchip/xc16/v1.36/bin/bin/../../lib\libm-elf.a(divmoddi3.eo)
-                  0x000e5a                  ___moddi3
+                  0x000e58         0x5c c:/program files (x86)/microchip/xc16/v1.36/bin/bin/../../lib\libm-elf.a(divmoddi3.eo)
+                  0x000e58                  ___moddi3
 
 usercode
  *(usercode)
@@ -397,18 +397,18 @@ __CONFIG1
 .comment
  *(.comment)
 
-.debug_info       0x000000       0x1d76
+.debug_info       0x000000       0x1d83
  *(.debug_info)
- .debug_info      0x000000       0x1d76 build/default/production/motorController.o
+ .debug_info      0x000000       0x1d83 build/default/production/motorController.o
  *(.gnu.linkonce.wi.*)
 
 .debug_abbrev     0x000000        0x1f1
  *(.debug_abbrev)
  .debug_abbrev    0x000000        0x1f1 build/default/production/motorController.o
 
-.debug_line       0x000000        0x2b5
+.debug_line       0x000000        0x2bb
  *(.debug_line)
- .debug_line      0x000000        0x2b5 build/default/production/motorController.o
+ .debug_line      0x000000        0x2bb build/default/production/motorController.o
 
 .debug_frame      0x000000        0x40c
  *(.debug_frame)
@@ -1319,15 +1319,15 @@ __c30_signature
                     0x080a                  _time_elapsed_delta_v
                     0x080b                  _handoff
 
-.ndata              0x080c          0x4
- .ndata             0x080c          0x4 build/default/production/motorController.o
+.ndata              0x080c          0x6
+ .ndata             0x080c          0x6 build/default/production/motorController.o
                     0x080c                  _time_limit
                     0x080e                  _time_limit_min
-                    0x080f                  _time_limit_delta_v
+                    0x0810                  _time_limit_delta_v
 
-.data               0x0810         0x3c
- .data              0x0810         0x22 c:/program files (x86)/microchip/xc16/v1.36/bin/bin/../../lib\liblega-c-elf.a(xlitob.XX_eo)
- .data              0x0832         0x1a c:/program files (x86)/microchip/xc16/v1.36/bin/bin/../../lib\liblega-c-elf.a(xprintf_cdnopuxX.XXeo)
+.data               0x0812         0x3c
+ .data              0x0812         0x22 c:/program files (x86)/microchip/xc16/v1.36/bin/bin/../../lib\liblega-c-elf.a(xlitob.XX_eo)
+ .data              0x0834         0x1a c:/program files (x86)/microchip/xc16/v1.36/bin/bin/../../lib\liblega-c-elf.a(xprintf_cdnopuxX.XXeo)
 
 .config_JTAGEN    0x00abfe          0x2
  .config_JTAGEN
@@ -1349,48 +1349,48 @@ __c30_signature
  .ivt._T1Interrupt
                   0x00001a          0x2 build/default/production/motorController.o
 
-.const              0x8eb6         0x3a load address 0x000eb6  
- .const             0x8eb6         0x3a build/default/production/motorController.o
+.const              0x8eb4         0x3a load address 0x000eb4  
+ .const             0x8eb4         0x3a build/default/production/motorController.o
 
-.text             0x000ef0        0x620
- .text            0x000ef0        0x620 build/default/production/motorController.o
-                  0x000ef0                  _spi_init
-                  0x000f62                  _spi_generate_frame
-                  0x000f80                  _spi_transfer
-                  0x000fbe                  _spi_change_pwm_mode
-                  0x000ff8                  _spi_lock_registers
-                  0x00102c                  _spi_unlock_registers
-                  0x00105e                  _spi_change_hs_peak_source_gate_current
-                  0x001098                  _spi_change_hs_peak_sink_gate_current
-                  0x0010d0                  _spi_change_ls_peak_source_gate_current
-                  0x00110a                  _spi_change_ls_peak_sink_gate_current
-                  0x001142                  _I2C_init
-                  0x001152                  _I2C_start
-                  0x001166                  _I2C_restart
-                  0x00117a                  _I2C_stop
-                  0x00118c                  _I2C_ack
-                  0x001198                  _I2C_nack
-                  0x0011a8                  _I2C_write
-                  0x0011c8                  _I2C_read
-                  0x0011e2                  _LCD_send8bits
-                  0x001234                  _LCD_init
-                  0x00127e                  _LCD_send_character
-                  0x00128c                  _LCD_send_string
-                  0x0012a6                  _LCD_clear
-                  0x0012b8                  _LCD_cursor_first_line
-                  0x0012c4                  _LCD_cursor_second_line
-                  0x0012d0                  _LCD_cursor_third_line
-                  0x0012dc                  _LCD_cursor_fourth_line
-                  0x0012e8                  _LCD_hide_cursor
-                  0x0012f4                  _LCD_show_cursor
-                  0x001300                  _LCD_position_cursor
-                  0x001334                  _LCD_store_character
-                  0x00136a                  _T1_init
-                  0x00138e                  _main
+.text             0x000eee        0x632
+ .text            0x000eee        0x632 build/default/production/motorController.o
+                  0x000eee                  _spi_init
+                  0x000f60                  _spi_generate_frame
+                  0x000f7e                  _spi_transfer
+                  0x000fbc                  _spi_change_pwm_mode
+                  0x000ff6                  _spi_lock_registers
+                  0x00102a                  _spi_unlock_registers
+                  0x00105c                  _spi_change_hs_peak_source_gate_current
+                  0x001096                  _spi_change_hs_peak_sink_gate_current
+                  0x0010ce                  _spi_change_ls_peak_source_gate_current
+                  0x001108                  _spi_change_ls_peak_sink_gate_current
+                  0x001140                  _I2C_init
+                  0x001150                  _I2C_start
+                  0x001164                  _I2C_restart
+                  0x001178                  _I2C_stop
+                  0x00118a                  _I2C_ack
+                  0x001196                  _I2C_nack
+                  0x0011a6                  _I2C_write
+                  0x0011c6                  _I2C_read
+                  0x0011e0                  _LCD_send8bits
+                  0x001232                  _LCD_init
+                  0x00127c                  _LCD_send_character
+                  0x00128a                  _LCD_send_string
+                  0x0012a4                  _LCD_clear
+                  0x0012b6                  _LCD_cursor_first_line
+                  0x0012c2                  _LCD_cursor_second_line
+                  0x0012ce                  _LCD_cursor_third_line
+                  0x0012da                  _LCD_cursor_fourth_line
+                  0x0012e6                  _LCD_hide_cursor
+                  0x0012f2                  _LCD_show_cursor
+                  0x0012fe                  _LCD_position_cursor
+                  0x001332                  _LCD_store_character
+                  0x001368                  _T1_init
+                  0x001388                  _main
 
-.dinit            0x001510         0x48
- .dinit           0x001510         0x48 data_init
+.dinit            0x001520         0x48
+ .dinit           0x001520         0x48 data_init
 
-.init.delay32     0x001558         0x1c
- .init.delay32    0x001558         0x1c c:/program files (x86)/microchip/xc16/v1.36/bin/bin/../../lib\liblega-pic30-elf.a(delay32.Leo)
-                  0x001558                  ___delay32
+.init.delay32     0x001568         0x1c
+ .init.delay32    0x001568         0x1c c:/program files (x86)/microchip/xc16/v1.36/bin/bin/../../lib\liblega-pic30-elf.a(delay32.Leo)
+                  0x001568                  ___delay32
