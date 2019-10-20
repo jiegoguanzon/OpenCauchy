@@ -85,12 +85,12 @@ xc16-ld 1.36 (A)
 section                    address   length (PC units)   length (bytes) (dec)
 -------                    -------   -----------------   --------------------
 .text                        0x200               0xcb4          0x130e  (4878)
-.const                       0xeb4                0x3a            0x57  (87)
-.text                        0xeee               0x632           0x94b  (2379)
-.dinit                      0x1520                0x48            0x6c  (108)
-.init.delay32               0x1568                0x1c            0x2a  (42)
+.const                       0xeb4                0x1c            0x2a  (42)
+.text                        0xed0               0x6b0           0xa08  (2568)
+.dinit                      0x1580                0x48            0x6c  (108)
+.init.delay32               0x15c8                0x1c            0x2a  (42)
 
-                 Total "program" memory used (bytes):         0x1d46  (7494) 11%
+                 Total "program" memory used (bytes):         0x1dd6  (7638) 11%
 
 
 "data" Memory  [Origin = 0x800, Length = 0x2000]
@@ -172,65 +172,65 @@ External Symbols in Program Memory (by address):
                   0x000df0                  ___umoddi3
                   0x000df8                  ___divdi3
                   0x000e58                  ___moddi3
-                  0x000eee                  _spi_init
-                  0x000f60                  _spi_generate_frame
-                  0x000f7e                  _spi_transfer
-                  0x000fbc                  _spi_change_pwm_mode
-                  0x000ff6                  _spi_lock_registers
-                  0x00102a                  _spi_unlock_registers
-                  0x00105c                  _spi_change_hs_peak_source_gate_current
-                  0x001096                  _spi_change_hs_peak_sink_gate_current
-                  0x0010ce                  _spi_change_ls_peak_source_gate_current
-                  0x001108                  _spi_change_ls_peak_sink_gate_current
-                  0x001140                  _I2C_init
-                  0x001150                  _I2C_start
-                  0x001164                  _I2C_restart
-                  0x001178                  _I2C_stop
-                  0x00118a                  _I2C_ack
-                  0x001196                  _I2C_nack
-                  0x0011a6                  _I2C_write
-                  0x0011c6                  _I2C_read
-                  0x0011e0                  _LCD_send8bits
-                  0x001232                  _LCD_init
-                  0x00127c                  _LCD_send_character
-                  0x00128a                  _LCD_send_string
-                  0x0012a4                  _LCD_clear
-                  0x0012b6                  _LCD_cursor_first_line
-                  0x0012c2                  _LCD_cursor_second_line
-                  0x0012ce                  _LCD_cursor_third_line
-                  0x0012da                  _LCD_cursor_fourth_line
-                  0x0012e6                  _LCD_hide_cursor
-                  0x0012f2                  _LCD_show_cursor
-                  0x0012fe                  _LCD_position_cursor
-                  0x001332                  _LCD_store_character
-                  0x001368                  _T1_init
-                  0x001388                  _main
-                  0x001568                  ___delay32
+                  0x000ed0                  _spi_init
+                  0x000f42                  _spi_generate_frame
+                  0x000f60                  _spi_transfer
+                  0x000f9e                  _spi_change_pwm_mode
+                  0x000fd8                  _spi_lock_registers
+                  0x00100c                  _spi_unlock_registers
+                  0x00103e                  _spi_change_hs_peak_source_gate_current
+                  0x001078                  _spi_change_hs_peak_sink_gate_current
+                  0x0010b0                  _spi_change_ls_peak_source_gate_current
+                  0x0010ea                  _spi_change_ls_peak_sink_gate_current
+                  0x001122                  _I2C_init
+                  0x001132                  _I2C_start
+                  0x001146                  _I2C_restart
+                  0x00115a                  _I2C_stop
+                  0x00116c                  _I2C_ack
+                  0x001178                  _I2C_nack
+                  0x001188                  _I2C_write
+                  0x0011a8                  _I2C_read
+                  0x0011c2                  _LCD_send8bits
+                  0x001214                  _LCD_init
+                  0x00125e                  _LCD_send_character
+                  0x00126c                  _LCD_send_string
+                  0x001286                  _LCD_clear
+                  0x001298                  _LCD_cursor_first_line
+                  0x0012a4                  _LCD_cursor_second_line
+                  0x0012b0                  _LCD_cursor_third_line
+                  0x0012bc                  _LCD_cursor_fourth_line
+                  0x0012c8                  _LCD_hide_cursor
+                  0x0012d4                  _LCD_show_cursor
+                  0x0012e0                  _LCD_position_cursor
+                  0x001314                  _LCD_store_character
+                  0x00134a                  _T1_init
+                  0x00136a                  _main
+                  0x0015c8                  ___delay32
 
 External Symbols in Program Memory (by name):
 
-                  0x00118a                  _I2C_ack
-                  0x001140                  _I2C_init
-                  0x001196                  _I2C_nack
-                  0x0011c6                  _I2C_read
-                  0x001164                  _I2C_restart
-                  0x001150                  _I2C_start
-                  0x001178                  _I2C_stop
-                  0x0011a6                  _I2C_write
-                  0x0012a4                  _LCD_clear
-                  0x0012b6                  _LCD_cursor_first_line
-                  0x0012da                  _LCD_cursor_fourth_line
-                  0x0012c2                  _LCD_cursor_second_line
-                  0x0012ce                  _LCD_cursor_third_line
-                  0x0012e6                  _LCD_hide_cursor
-                  0x001232                  _LCD_init
-                  0x0012fe                  _LCD_position_cursor
-                  0x0011e0                  _LCD_send8bits
-                  0x00127c                  _LCD_send_character
-                  0x00128a                  _LCD_send_string
-                  0x0012f2                  _LCD_show_cursor
-                  0x001332                  _LCD_store_character
-                  0x001368                  _T1_init
+                  0x00116c                  _I2C_ack
+                  0x001122                  _I2C_init
+                  0x001178                  _I2C_nack
+                  0x0011a8                  _I2C_read
+                  0x001146                  _I2C_restart
+                  0x001132                  _I2C_start
+                  0x00115a                  _I2C_stop
+                  0x001188                  _I2C_write
+                  0x001286                  _LCD_clear
+                  0x001298                  _LCD_cursor_first_line
+                  0x0012bc                  _LCD_cursor_fourth_line
+                  0x0012a4                  _LCD_cursor_second_line
+                  0x0012b0                  _LCD_cursor_third_line
+                  0x0012c8                  _LCD_hide_cursor
+                  0x001214                  _LCD_init
+                  0x0012e0                  _LCD_position_cursor
+                  0x0011c2                  _LCD_send8bits
+                  0x00125e                  _LCD_send_character
+                  0x00126c                  _LCD_send_string
+                  0x0012d4                  _LCD_show_cursor
+                  0x001314                  _LCD_store_character
+                  0x00134a                  _T1_init
                   0x0004b2                  __DefaultInterrupt
                   0x000a0e                  __Litob
                   0x00066e                  __Puttxt
@@ -239,7 +239,7 @@ External Symbols in Program Memory (by name):
                   0x0007e6                  __Vacopy
                   0x0004e4                  ___Printf_cdnopuxX
                   0x0007ea                  ___Putfld_cdnopuxX
-                  0x001568                  ___delay32
+                  0x0015c8                  ___delay32
                   0x000df8                  ___divdi3
                   0x000c6c                  ___divsi3
                   0x000e58                  ___moddi3
@@ -253,18 +253,18 @@ External Symbols in Program Memory (by name):
                   0x00023c                  __psv_init
                   0x000200                  __resetPRI
                   0x0004c6                  __sprintf_cdnopuxX
-                  0x001388                  _main
+                  0x00136a                  _main
                   0x000648                  _memcpy
-                  0x001096                  _spi_change_hs_peak_sink_gate_current
-                  0x00105c                  _spi_change_hs_peak_source_gate_current
-                  0x001108                  _spi_change_ls_peak_sink_gate_current
-                  0x0010ce                  _spi_change_ls_peak_source_gate_current
-                  0x000fbc                  _spi_change_pwm_mode
-                  0x000f60                  _spi_generate_frame
-                  0x000eee                  _spi_init
-                  0x000ff6                  _spi_lock_registers
-                  0x000f7e                  _spi_transfer
-                  0x00102a                  _spi_unlock_registers
+                  0x001078                  _spi_change_hs_peak_sink_gate_current
+                  0x00103e                  _spi_change_hs_peak_source_gate_current
+                  0x0010ea                  _spi_change_ls_peak_sink_gate_current
+                  0x0010b0                  _spi_change_ls_peak_source_gate_current
+                  0x000f9e                  _spi_change_pwm_mode
+                  0x000f42                  _spi_generate_frame
+                  0x000ed0                  _spi_init
+                  0x000fd8                  _spi_lock_registers
+                  0x000f60                  _spi_transfer
+                  0x00100c                  _spi_unlock_registers
                   0x000656                  _strchr
                   0x0004b8                  sprintf_cdnopuxX.XXeo:_prout
 
@@ -406,13 +406,13 @@ __CONFIG1
  *(.debug_abbrev)
  .debug_abbrev    0x000000        0x1f1 build/default/production/motorController.o
 
-.debug_line       0x000000        0x2bb
+.debug_line       0x000000        0x2c9
  *(.debug_line)
- .debug_line      0x000000        0x2bb build/default/production/motorController.o
+ .debug_line      0x000000        0x2c9 build/default/production/motorController.o
 
-.debug_frame      0x000000        0x40c
+.debug_frame      0x000000        0x460
  *(.debug_frame)
- .debug_frame     0x000000        0x40c build/default/production/motorController.o
+ .debug_frame     0x000000        0x460 build/default/production/motorController.o
 
 .debug_str        0x000000         0xf6
  *(.debug_str)
@@ -1349,48 +1349,48 @@ __c30_signature
  .ivt._T1Interrupt
                   0x00001a          0x2 build/default/production/motorController.o
 
-.const              0x8eb4         0x3a load address 0x000eb4  
- .const             0x8eb4         0x3a build/default/production/motorController.o
+.const              0x8eb4         0x1c load address 0x000eb4  
+ .const             0x8eb4         0x1c build/default/production/motorController.o
 
-.text             0x000eee        0x632
- .text            0x000eee        0x632 build/default/production/motorController.o
-                  0x000eee                  _spi_init
-                  0x000f60                  _spi_generate_frame
-                  0x000f7e                  _spi_transfer
-                  0x000fbc                  _spi_change_pwm_mode
-                  0x000ff6                  _spi_lock_registers
-                  0x00102a                  _spi_unlock_registers
-                  0x00105c                  _spi_change_hs_peak_source_gate_current
-                  0x001096                  _spi_change_hs_peak_sink_gate_current
-                  0x0010ce                  _spi_change_ls_peak_source_gate_current
-                  0x001108                  _spi_change_ls_peak_sink_gate_current
-                  0x001140                  _I2C_init
-                  0x001150                  _I2C_start
-                  0x001164                  _I2C_restart
-                  0x001178                  _I2C_stop
-                  0x00118a                  _I2C_ack
-                  0x001196                  _I2C_nack
-                  0x0011a6                  _I2C_write
-                  0x0011c6                  _I2C_read
-                  0x0011e0                  _LCD_send8bits
-                  0x001232                  _LCD_init
-                  0x00127c                  _LCD_send_character
-                  0x00128a                  _LCD_send_string
-                  0x0012a4                  _LCD_clear
-                  0x0012b6                  _LCD_cursor_first_line
-                  0x0012c2                  _LCD_cursor_second_line
-                  0x0012ce                  _LCD_cursor_third_line
-                  0x0012da                  _LCD_cursor_fourth_line
-                  0x0012e6                  _LCD_hide_cursor
-                  0x0012f2                  _LCD_show_cursor
-                  0x0012fe                  _LCD_position_cursor
-                  0x001332                  _LCD_store_character
-                  0x001368                  _T1_init
-                  0x001388                  _main
+.text             0x000ed0        0x6b0
+ .text            0x000ed0        0x6b0 build/default/production/motorController.o
+                  0x000ed0                  _spi_init
+                  0x000f42                  _spi_generate_frame
+                  0x000f60                  _spi_transfer
+                  0x000f9e                  _spi_change_pwm_mode
+                  0x000fd8                  _spi_lock_registers
+                  0x00100c                  _spi_unlock_registers
+                  0x00103e                  _spi_change_hs_peak_source_gate_current
+                  0x001078                  _spi_change_hs_peak_sink_gate_current
+                  0x0010b0                  _spi_change_ls_peak_source_gate_current
+                  0x0010ea                  _spi_change_ls_peak_sink_gate_current
+                  0x001122                  _I2C_init
+                  0x001132                  _I2C_start
+                  0x001146                  _I2C_restart
+                  0x00115a                  _I2C_stop
+                  0x00116c                  _I2C_ack
+                  0x001178                  _I2C_nack
+                  0x001188                  _I2C_write
+                  0x0011a8                  _I2C_read
+                  0x0011c2                  _LCD_send8bits
+                  0x001214                  _LCD_init
+                  0x00125e                  _LCD_send_character
+                  0x00126c                  _LCD_send_string
+                  0x001286                  _LCD_clear
+                  0x001298                  _LCD_cursor_first_line
+                  0x0012a4                  _LCD_cursor_second_line
+                  0x0012b0                  _LCD_cursor_third_line
+                  0x0012bc                  _LCD_cursor_fourth_line
+                  0x0012c8                  _LCD_hide_cursor
+                  0x0012d4                  _LCD_show_cursor
+                  0x0012e0                  _LCD_position_cursor
+                  0x001314                  _LCD_store_character
+                  0x00134a                  _T1_init
+                  0x00136a                  _main
 
-.dinit            0x001520         0x48
- .dinit           0x001520         0x48 data_init
+.dinit            0x001580         0x48
+ .dinit           0x001580         0x48 data_init
 
-.init.delay32     0x001568         0x1c
- .init.delay32    0x001568         0x1c c:/program files (x86)/microchip/xc16/v1.36/bin/bin/../../lib\liblega-pic30-elf.a(delay32.Leo)
-                  0x001568                  ___delay32
+.init.delay32     0x0015c8         0x1c
+ .init.delay32    0x0015c8         0x1c c:/program files (x86)/microchip/xc16/v1.36/bin/bin/../../lib\liblega-pic30-elf.a(delay32.Leo)
+                  0x0015c8                  ___delay32

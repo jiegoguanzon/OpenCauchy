@@ -12,6 +12,7 @@
 #include <string.h>
 #include <stdlib.h>
 #include <stdio.h>
+#include <math.h>
 #include "headers/spi.h"
 #include "headers/lcd_i2c.h"
 
@@ -32,6 +33,10 @@
 #define INHC    _LATB1
 #define INLC    _LATB0
 
+#define CSA     _RA2
+#define CSB     _RA2
+#define CSC     _RA2
+
 uint8_t timer;
 uint8_t state;
 
@@ -42,6 +47,24 @@ uint8_t time_elapsed_delta_v = 0;
 uint8_t time_limit_delta_v = 200;
 
 uint8_t handoff = 0;
+
+float rotor_theta = 0;
+
+float i_a = 0;
+float i_b = 0;
+float i_c = 0;
+float i_alpha = 0;
+float i_beta = 0;
+float i_d = 0;
+float i_q = 0;
+
+float v_a = 0;
+float v_b = 0;
+float v_c = 0;
+float v_alpha = 0;
+float v_beta = 0;
+float v_d = 0;
+float v_q = 0;
 
 void __attribute__((interrupt, no_auto_psv)) _T1Interrupt (void) {
     _T1IE = 0;
@@ -127,6 +150,32 @@ void T1_init(){
     return;
 }
 
+void clark_park_transform() {
+
+    i_a = CSA;
+    i_b = CSB;
+    i_c = CSC;
+
+    // Clark Trasform 
+    i_alpha = i_a;
+    i_beta = (i_a + 2 * i_b) / sqrt(3);
+
+    i_d = i_alpha * cos(rotor_theta) + i_beta * sin(rotor_theta);
+    i_q = -i_alpha * sin(rotor_theta) + i_beta * cos(rotor_theta);
+
+}
+
+void inv_clark_park_trasform() {
+
+    v_alpha = v_d * cos(rotor_theta) - v_q * sin(rotor_theta);
+    v_beta = v_d * sin(rotor_theta) + v_q * cos(rotor_theta);
+
+    v_a = v_beta;
+    v_b = (-v_beta + sqrt(3) * v_alpha) / 2;
+    v_c = (-v_beta - sqrt(3) * v_alpha) / 2;
+
+}
+
 int main (void) {
 
     TRISA = 0xFFFF;
@@ -140,16 +189,16 @@ int main (void) {
     LCD_init();
     spi_init();
 
+    INHA = INHB = INHC = 0;
+    INLA = INLB = INLC = 0;
+
     spi_change_hs_peak_source_gate_current(3);
     spi_change_hs_peak_sink_gate_current(3);
     spi_change_ls_peak_source_gate_current(3);
     spi_change_ls_peak_sink_gate_current(3);
-    //spi_change_pwm_mode(1);
+    spi_change_pwm_mode(1);
 
-    INHA = INHB = INHC = 0;
-    INLA = INLB = INLC = 0;
-
-    frame = spi_generate_frame(SPI_READ, 0x2, 0x0);
+    frame = spi_generate_frame(SPI_READ, 0x0, 0x0);
     data = spi_transfer(frame);
 
     sprintf(str, "Frame: 0x%04x", frame);
@@ -158,52 +207,59 @@ int main (void) {
     sprintf(str, "Data: 0x%04x", data);
     LCD_send_string(str);
 
+    frame = spi_generate_frame(SPI_READ, 0x1, 0x0);
+    data = spi_transfer(frame);
+
+    LCD_cursor_third_line();
+    sprintf(str, "Frame: 0x%04x", frame);
+    LCD_send_string(str);
+    LCD_cursor_fourth_line();
+    sprintf(str, "Data: 0x%04x", data);
+    LCD_send_string(str);
+
     state = 1;
+    _TRISB14 = 1;
     _TRISB15 = 1;
-    //_LATB15 = 0;
 
     uint8_t go = 0;
 
+    T1_init();
+
     while (1) {
 
-        while (go == 0) {
-            if (_RB15)
-                go++;
-        }
+        if (!_RB14) {
 
-        if (go == 1) {
-            go++;
+            __delay_ms(3000);
+
+            frame = spi_generate_frame(SPI_READ, 0x0, 0x0);
+            data = spi_transfer(frame);
+
+            LCD_cursor_first_line();
+            sprintf(str, "Frame: 0x%04x", frame);
+            LCD_send_string(str);
+            LCD_cursor_second_line();
+            sprintf(str, "Data: 0x%04x", data);
+            LCD_send_string(str);
+
+            frame = spi_generate_frame(SPI_READ, 0x1, 0x0);
+            data = spi_transfer(frame);
+
             LCD_cursor_third_line();
-            LCD_send_string("Starting motor.");
-            __delay_ms(1000);
-            LCD_send_character('.');
-            __delay_ms(1000);
-            LCD_send_character('.');
-            __delay_ms(1000);
+            sprintf(str, "Frame: 0x%04x", frame);
+            LCD_send_string(str);
             LCD_cursor_fourth_line();
-            LCD_send_string("Motor started.");
-            T1_init();
-        }
+            sprintf(str, "Data: 0x%04x", data);
+            LCD_send_string(str);
 
-        /*
-        if (_RB15) {
-            INLA = 0;
-            INHA = 0;
-            INLB = 0;
-            INHB = 0;
-            INLC = 0;
-            INHC = 0;
             break;
-        }
-        */
 
+        }
 
         if (time_elapsed >= time_limit) {
             time_elapsed = 0;
 
             switch (state) {
 
-                /*
                 case 1:
                     INLA = 1;
                     INHA = 1;
@@ -252,57 +308,7 @@ int main (void) {
                     INLC = 1;
                     INHC = 1;
                     break;
-                */
-                
-                case 1:
-                    INHA = 1;
-                    INLA = 0;
-                    INHB = 0;
-                    INLB = 1;
-                    INHC = 0;
-                    INLC = 0;
-                    break;
-                case 2:
-                    INHA = 1;
-                    INLA = 0;
-                    INHB = 0;
-                    INLB = 0;
-                    INHC = 0;
-                    INLC = 1;
-                    break;
-                case 3:
-                    INHA = 0;
-                    INLA = 0;
-                    INHB = 1;
-                    INLB = 0;
-                    INHC = 0;
-                    INLC = 1;
-                    break;
-                case 4:
-                    INHA = 0;
-                    INLA = 1;
-                    INHB = 1;
-                    INLB = 0;
-                    INHC = 0;
-                    INLC = 0;
-                    break;
-                case 5:
-                    INHA = 0;
-                    INLA = 1;
-                    INHB = 0;
-                    INLB = 0;
-                    INHC = 1;
-                    INLC = 0;
-                    break;
-                case 6:
-                    INHA = 0;
-                    INLA = 0;
-                    INHB = 0;
-                    INLB = 1;
-                    INHC = 1;
-                    INLC = 0;
-                    break;
-                    
+
             }
 
             if (++state == 7)
@@ -314,8 +320,7 @@ int main (void) {
 
     }
 
-    __delay_ms(1000);
-    while (!_RB15);
+    while (1);
 
     return 0;
 
