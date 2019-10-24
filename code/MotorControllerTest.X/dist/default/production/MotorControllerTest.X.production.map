@@ -61,10 +61,10 @@ xc16-ld 1.36 (A)
 section                    address   length (PC units)   length (bytes) (dec)
 -------                    -------   -----------------   --------------------
 .text                        0x200                0xce           0x135  (309)
-.text                        0x2ce                0x98            0xe4  (228)
-.init.delay32                0x366                0x1c            0x2a  (42)
+.text                        0x2ce                0x50            0x78  (120)
+.init.delay32                0x31e                0x1c            0x2a  (42)
 
-                 Total "program" memory used (bytes):          0x243  (579) <1%
+                 Total "program" memory used (bytes):          0x1d7  (471) <1%
 
 
 "data" Memory  [Origin = 0x800, Length = 0x2000]
@@ -93,12 +93,12 @@ External Symbols in Program Memory (by address):
                   0x000252                  __data_init_standard
                   0x0002c8                  __DefaultInterrupt
                   0x0002ce                  _main
-                  0x000366                  ___delay32
+                  0x00031e                  ___delay32
 
 External Symbols in Program Memory (by name):
 
                   0x0002c8                  __DefaultInterrupt
-                  0x000366                  ___delay32
+                  0x00031e                  ___delay32
                   0x000252                  __data_init
                   0x000252                  __data_init_standard
                   0x00023c                  __psv_init
@@ -185,26 +185,26 @@ __CONFIG1
 .comment
  *(.comment)
 
-.debug_info       0x000000        0x32c
+.debug_info       0x000000        0x477
  *(.debug_info)
- .debug_info      0x000000        0x32c build/default/production/motorControllerTest.o
+ .debug_info      0x000000        0x477 build/default/production/motorControllerTest.o
  *(.gnu.linkonce.wi.*)
 
 .debug_abbrev     0x000000         0xae
  *(.debug_abbrev)
  .debug_abbrev    0x000000         0xae build/default/production/motorControllerTest.o
 
-.debug_line       0x000000        0x128
+.debug_line       0x000000        0x101
  *(.debug_line)
- .debug_line      0x000000        0x128 build/default/production/motorControllerTest.o
+ .debug_line      0x000000        0x101 build/default/production/motorControllerTest.o
 
 .debug_frame      0x000000         0x30
  *(.debug_frame)
  .debug_frame     0x000000         0x30 build/default/production/motorControllerTest.o
 
-.debug_str        0x000000          0x9
+.debug_str        0x000000         0x13
  *(.debug_str)
- .debug_str       0x000000          0x9 build/default/production/motorControllerTest.o
+ .debug_str       0x000000         0x13 build/default/production/motorControllerTest.o
 
 .debug_loc
  *(.debug_loc)
@@ -1053,20 +1053,20 @@ OUTPUT(dist/default/production/MotorControllerTest.X.production.elf elf32-pic30)
 LOAD default_isr
 
 .debug_pubtypes
-                  0x000018         0x48
+                  0x000018         0x67
  .debug_pubtypes
-                  0x000018         0x48 build/default/production/motorControllerTest.o
+                  0x000018         0x67 build/default/production/motorControllerTest.o
 
 __c30_signature
-                  0x000060         0x18
+                  0x00007f         0x18
  __c30_signature
-                  0x000060          0x6 build/default/production/motorControllerTest.o
+                  0x00007f          0x6 build/default/production/motorControllerTest.o
  __c30_signature
-                  0x000066          0x6 c:/program files (x86)/microchip/xc16/v1.36/bin/bin/../../lib\liblega-pic30-elf.a(crt0_standard.o)
+                  0x000085          0x6 c:/program files (x86)/microchip/xc16/v1.36/bin/bin/../../lib\liblega-pic30-elf.a(crt0_standard.o)
  __c30_signature
-                  0x00006c          0x6 c:/program files (x86)/microchip/xc16/v1.36/bin/bin/../../lib\liblega-pic30-elf.a(data_init_standard.o)
+                  0x00008b          0x6 c:/program files (x86)/microchip/xc16/v1.36/bin/bin/../../lib\liblega-pic30-elf.a(data_init_standard.o)
  __c30_signature
-                  0x000072          0x6 c:/program files (x86)/microchip/xc16/v1.36/bin/bin/../../lib\liblega-pic30-elf.a(delay32.Leo)
+                  0x000091          0x6 c:/program files (x86)/microchip/xc16/v1.36/bin/bin/../../lib\liblega-pic30-elf.a(delay32.Leo)
 
 .config_JTAGEN    0x00abfe          0x2
  .config_JTAGEN
@@ -1078,10 +1078,10 @@ __c30_signature
 .config_WPEND     0x00abfa          0x2
  .config_WPEND    0x00abfa          0x2 build/default/production/motorControllerTest.o
 
-.text             0x0002ce         0x98
- .text            0x0002ce         0x98 build/default/production/motorControllerTest.o
+.text             0x0002ce         0x50
+ .text            0x0002ce         0x50 build/default/production/motorControllerTest.o
                   0x0002ce                  _main
 
-.init.delay32     0x000366         0x1c
- .init.delay32    0x000366         0x1c c:/program files (x86)/microchip/xc16/v1.36/bin/bin/../../lib\liblega-pic30-elf.a(delay32.Leo)
-                  0x000366                  ___delay32
+.init.delay32     0x00031e         0x1c
+ .init.delay32    0x00031e         0x1c c:/program files (x86)/microchip/xc16/v1.36/bin/bin/../../lib\liblega-pic30-elf.a(delay32.Leo)
+                  0x00031e                  ___delay32

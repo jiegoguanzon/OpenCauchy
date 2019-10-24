@@ -34,8 +34,12 @@ int main(void) {
 
     uint8_t state = 0;
 
+    INHC = 1;
+    INLC = 0;
+
     while (1) {
 
+        /*
         switch (state) {
             case 0:
                 INHA = 1;
@@ -89,8 +93,12 @@ int main(void) {
 
         if (++state == 6)
             state = 0;
+        */
 
-        __delay_ms(5);
+        INHC = !_RB1;
+        INLC = !_RB0;
+
+        __delay_ms(100);
 
     }
 
