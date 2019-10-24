@@ -13,3 +13,10 @@
 
 #define DRV_ENABLE  _LATB6      // Enable Output Pin
 #define DRV_SS      _LATB13     // Slave Select Output Pin
+
+#define V_DS        16          // DC Link Voltage
+#define PWM_PERIOD  100         // Period of SVPWM in microseconds
+
+#define V_REF       3.3         // Voltage Reference for Current Sense in Volts
+#define SENSE_GAIN  20          // Current Sense Gain in Volts per Volts
+#define R_SENSE     0.001       // Sense Resistor Value in Ohms

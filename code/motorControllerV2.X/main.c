@@ -26,7 +26,9 @@
 #pragma config PLLDIV = NODIV
 #pragma config SOSCSEL = IO
 
-double angle = 0.0;
+float *phase_a_current, *phase_b_current, *phase_c_current;
+float *i_alpha, *i_beta;
+float *i_d, *i_q;
 
 void __attribute__((interrupt, no_auto_psv)) _T1Interrupt (void) {
 
@@ -70,7 +72,7 @@ void t1_init () {
 
 }
 
-void oc1_init () {
+void oc_init () {
 
     OC1CON1 = 0;
     OC1CON2 = 0;
@@ -107,29 +109,6 @@ void oc1_init () {
 
 }
 
-void oc2_init () {
-
-    OC2CON1 = 0;
-    OC2CON2 = 0;
-
-    OC2CON1bits.OCTSEL = 0x07;
-    OC2CON1bits.OCM = 0x07;
-    OC2CON2bits.SYNCSEL = 0x1F;
-
-    __builtin_write_OSCCONL(OSCCON & 0xBF);
-
-    _RP3R = 19;
-
-    __builtin_write_OSCCONL(OSCCON | 0x40);
-
-    OC2R = 399 / 2;
-    OC2RS = 399;
-
-    _OC2IF = 0;
-    _OC2IE = 1;
-
-}
-
 int main(void) {
 
     TRISA = 0xFFFF;
@@ -137,15 +116,14 @@ int main(void) {
     AD1PCFG = 0xFFFF;
 
     LCD_init();
-    oc1_init();
-    //oc2_init();
+    oc_init();
 
     double angle = 0;
     double angle_delta = 1;
 
     while (1) {
 
-        svpwm(angle);
+        foc_svpwm(angle);
 
         angle += angle_delta;
 
