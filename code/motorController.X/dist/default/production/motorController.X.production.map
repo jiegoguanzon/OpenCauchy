@@ -126,11 +126,11 @@ section                    address   length (PC units)   length (bytes) (dec)
 -------                    -------   -----------------   --------------------
 .text                        0x200              0x1182          0x1a43  (6723)
 .const                      0x1382                0x1c            0x2a  (42)
-.text                       0x139e               0x826           0xc39  (3129)
-.dinit                      0x1bc4                0x4e            0x75  (117)
-.init.delay32               0x1c12                0x1c            0x2a  (42)
+.text                       0x139e               0x6b8           0xa14  (2580)
+.dinit                      0x1a56                0x4e            0x75  (117)
+.init.delay32               0x1aa4                0x1c            0x2a  (42)
 
-                 Total "program" memory used (bytes):         0x2745  (10053) 15%
+                 Total "program" memory used (bytes):         0x2520  (9504) 14%
 
 
 "data" Memory  [Origin = 0x800, Length = 0x2000]
@@ -302,7 +302,7 @@ External Symbols in Program Memory (by address):
                   0x001838                  _clark_park_transform
                   0x0018fa                  _inv_clark_park_trasform
                   0x0019ae                  _main
-                  0x001c12                  ___delay32
+                  0x001aa4                  ___delay32
 
 External Symbols in Program Memory (by name):
 
@@ -337,7 +337,7 @@ External Symbols in Program Memory (by name):
                   0x0009b2                  ___Printf_cdnopuxX
                   0x000cb8                  ___Putfld_cdnopuxX
                   0x0004ba                  ___addsf3
-                  0x001c12                  ___delay32
+                  0x001aa4                  ___delay32
                   0x0012c6                  ___divdi3
                   0x000578                  ___divsf3
                   0x00113a                  ___divsi3
@@ -574,22 +574,22 @@ __CONFIG1
 .comment
  *(.comment)
 
-.debug_info       0x000000       0x2066
+.debug_info       0x000000       0x2059
  *(.debug_info)
- .debug_info      0x000000       0x2066 build/default/production/motorController.o
+ .debug_info      0x000000       0x2059 build/default/production/motorController.o
  *(.gnu.linkonce.wi.*)
 
 .debug_abbrev     0x000000        0x1f1
  *(.debug_abbrev)
  .debug_abbrev    0x000000        0x1f1 build/default/production/motorController.o
 
-.debug_line       0x000000        0x2e3
+.debug_line       0x000000        0x28a
  *(.debug_line)
- .debug_line      0x000000        0x2e3 build/default/production/motorController.o
+ .debug_line      0x000000        0x28a build/default/production/motorController.o
 
-.debug_frame      0x000000        0x4a4
+.debug_frame      0x000000        0x450
  *(.debug_frame)
- .debug_frame     0x000000        0x4a4 build/default/production/motorController.o
+ .debug_frame     0x000000        0x450 build/default/production/motorController.o
 
 .debug_str        0x000000        0x10c
  *(.debug_str)
@@ -1588,8 +1588,8 @@ __c30_signature
 .const              0x9382         0x1c load address 0x001382  
  .const             0x9382         0x1c build/default/production/motorController.o
 
-.text             0x00139e        0x826
- .text            0x00139e        0x826 build/default/production/motorController.o
+.text             0x00139e        0x6b8
+ .text            0x00139e        0x6b8 build/default/production/motorController.o
                   0x00139e                  _spi_init
                   0x001410                  _spi_generate_frame
                   0x00142e                  _spi_transfer
@@ -1626,9 +1626,9 @@ __c30_signature
                   0x0018fa                  _inv_clark_park_trasform
                   0x0019ae                  _main
 
-.dinit            0x001bc4         0x4e
- .dinit           0x001bc4         0x4e data_init
+.dinit            0x001a56         0x4e
+ .dinit           0x001a56         0x4e data_init
 
-.init.delay32     0x001c12         0x1c
- .init.delay32    0x001c12         0x1c c:/program files (x86)/microchip/xc16/v1.36/bin/bin/../../lib\liblega-pic30-elf.a(delay32.Leo)
-                  0x001c12                  ___delay32
+.init.delay32     0x001aa4         0x1c
+ .init.delay32    0x001aa4         0x1c c:/program files (x86)/microchip/xc16/v1.36/bin/bin/../../lib\liblega-pic30-elf.a(delay32.Leo)
+                  0x001aa4                  ___delay32

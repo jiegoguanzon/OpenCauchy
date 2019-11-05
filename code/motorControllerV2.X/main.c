@@ -14,6 +14,7 @@
 #include "headers/i2c.h"
 #include "headers/lcd_i2c.h"
 #include "headers/drv8323.h"
+#include "headers/trig_lookup.h"
 #include "headers/foc.h"
 
 #pragma config FWDTEN = OFF
@@ -26,9 +27,10 @@
 #pragma config PLLDIV = NODIV
 #pragma config SOSCSEL = IO
 
-float *phase_a_current, *phase_b_current, *phase_c_current;
-float *i_alpha, *i_beta;
-float *i_d, *i_q;
+float phase_a_current, phase_b_current, phase_c_current;
+float i_alpha, i_beta;
+float i_d, i_q;
+float v_alpha, v_beta;
 
 void __attribute__((interrupt, no_auto_psv)) _T1Interrupt (void) {
 
@@ -57,6 +59,16 @@ void __attribute__((interrupt, no_auto_psv)) _OC2Interrupt (void) {
 
     _OC2IF = 0;
     _OC2IE = 1;
+
+}
+
+void __attribute__((interrupt, no_auto_psv)) _OC3Interrupt (void) {
+
+    _OC3IE = 0;
+    _OC3IF = 0;
+
+    _OC3IF = 0;
+    _OC3IE = 1;
 
 }
 
@@ -94,18 +106,24 @@ void oc_init () {
     OC2R = 399 / 2;
     OC2RS = 399;
 
-    __builtin_write_OSCCONL(OSCCON & 0xBF);
+    OC3CON1 = 0;
+    OC3CON2 = 0;
 
-    _RP1R = 18;
-    _RP3R = 19;
+    OC3CON1bits.OCTSEL = 0x07;
+    OC3CON1bits.OCM = 0x07;
+    OC3CON2bits.SYNCSEL = 0x1F;
 
-    __builtin_write_OSCCONL(OSCCON | 0x40);
+    OC3R = 399 / 2;
+    OC3RS = 399;
 
     _OC1IF = 0;
     _OC1IE = 1;
 
     _OC2IF = 0;
     _OC2IE = 1;
+
+    _OC3IF = 0;
+    _OC3IE = 1;
 
 }
 
@@ -115,22 +133,36 @@ int main(void) {
     TRISB = 0xFFC0;
     AD1PCFG = 0xFFFF;
 
-    LCD_init();
+    //LCD_init();
     oc_init();
+    spi_init();
+    //create_trig_tables();
 
-    double angle = 0;
-    double angle_delta = 1;
+    __builtin_write_OSCCONL(OSCCON & 0xBF);
+
+    _RP0R = 18;
+    _RP1R = 19;
+    _RP2R = 20;
+    _RP7R = 8;                                  // SPI1 Clock Output to RB7/RP7
+    _SDI1R = 5;                                 // SPI1 Data Input to RA0/RP5
+    _RP6R = 7;                                  // SPI1 Data Output to RA1/RP6
+
+    __builtin_write_OSCCONL(OSCCON | 0x40);
+
+    drv_change_pwm_mode(1);
+
+    float angle = 0;
+    float angle_delta = 1;
 
     while (1) {
 
-        foc_svpwm(angle);
+        foc_inv_park_transform(&v_alpha, &v_beta, 0, 0, angle * PI / 180);
+        foc_svpwm(v_alpha, v_beta);
 
         angle += angle_delta;
 
         if(angle >= 360)
             angle = 0;
-
-        __delay_ms(50);
 
     }
 

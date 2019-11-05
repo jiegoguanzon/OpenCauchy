@@ -5,4 +5,5 @@ headers/user_params.h  \
 headers/i2c.h  \
 headers/lcd_i2c.h  \
 headers/drv8323.h  \
- headers/foc.h 
+ headers/trig_lookup.h  \
+headers/foc.h 

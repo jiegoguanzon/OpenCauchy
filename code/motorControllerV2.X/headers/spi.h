@@ -30,11 +30,13 @@ void spi_init () {
 
     _SPIROV = 0;                                // Clear overflow flag
 
+    /*
     __builtin_write_OSCCONL(OSCCON & 0xBF);
     _RP7R = 8;                                  // SPI1 Clock Output to RB7/RP7
     _SDI1R = 5;                                 // SPI1 Data Input to RA0/RP5
     _RP6R = 7;                                  // SPI1 Data Output to RA1/RP6
     __builtin_write_OSCCONL(OSCCON | 0x40);
+    */
 
     _SPIEN = 1;                                 // Enable SPI1 module
 

@@ -192,13 +192,13 @@ int main (void) {
     INHA = INHB = INHC = 0;
     INLA = INLB = INLC = 0;
 
-    spi_change_hs_peak_source_gate_current(3);
-    spi_change_hs_peak_sink_gate_current(3);
-    spi_change_ls_peak_source_gate_current(3);
-    spi_change_ls_peak_sink_gate_current(3);
+    //spi_change_hs_peak_source_gate_current(3);
+    //spi_change_hs_peak_sink_gate_current(3);
+    //spi_change_ls_peak_source_gate_current(3);
+    //spi_change_ls_peak_sink_gate_current(3);
     spi_change_pwm_mode(1);
 
-    frame = spi_generate_frame(SPI_READ, 0x0, 0x0);
+    frame = spi_generate_frame(SPI_READ, 0x2, 0x0);
     data = spi_transfer(frame);
 
     sprintf(str, "Frame: 0x%04x", frame);
@@ -207,6 +207,7 @@ int main (void) {
     sprintf(str, "Data: 0x%04x", data);
     LCD_send_string(str);
 
+/*
     frame = spi_generate_frame(SPI_READ, 0x1, 0x0);
     data = spi_transfer(frame);
 
@@ -319,6 +320,7 @@ int main (void) {
         }
 
     }
+*/
 
     while (1);
 

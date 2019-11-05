@@ -1,8 +1,3 @@
-#define PI  3.14159265
-#define ONE_OVER_SQRT3  0.5773502692
-#define TWO_OVER_SQRT3  1.154700538
-#define SQRT3_OVER_TWO  0.8660254038
-
 void foc_get_phase_currents (float *phase_a_current, float *phase_b_current, float *phase_c_current) {
 
     *phase_a_current = ((V_REF / 2) - DRV_CSA) / (SENSE_GAIN * R_SENSE);
@@ -26,36 +21,38 @@ void foc_park_transform (float *i_d, float *i_q, float i_alpha, float i_beta, fl
 }
 
 void foc_inv_park_transform (float *v_alpha, float *v_beta, float vq_ref, float vd_ref, float theta) {
+    
+    vd_ref = 9.0;
+    vq_ref = 7.0;
 
     *v_alpha = (vd_ref * cos(theta)) - (vq_ref * sin(theta));
     *v_beta = (vq_ref * cos(theta)) + (vd_ref * sin(theta));
 
 }
 
-void foc_svpwm (double angle) {
+void foc_svpwm (float v_alpha, float v_beta) {
 
-    double v_alpha = 7.0;
-    double v_beta = 5.2;
-
-    double v_s = sqrt(v_alpha * v_alpha + v_beta * v_beta);
-    double phi = atan(v_beta / v_alpha);
-    phi = 340 * PI / 180;
-    phi = angle * PI / 180;
+    float v_s = sqrt(v_alpha * v_alpha + v_beta * v_beta);
+    float phi = atan2f(v_beta, v_alpha) + PI;
+    //phi = angle * PI / 180;
 
     int k = (phi / (PI / 3)) + 1;
 
-    //double m = (1.732050808 * PWM_PERIOD * v_s) / V_DC;
-    //double m = (1.732050808 * PWM_PERIOD * v_s) / V_DC;
-    //double m = (1.224744871 * PWM_PERIOD * v_s) / V_DC;
-    double m = 0.57;
+    if (v_s > V_DS)
+        v_s = V_DS;
 
-    double period_b = SQRT3_OVER_TWO * m * PWM_PERIOD * sin(((PI * k) / 3) - phi);
-    double period_c = SQRT3_OVER_TWO * m * PWM_PERIOD * sin(-((PI * (k - 1)) / 3) + phi);
-    double period_a = PWM_PERIOD - period_b - period_c;
+    //float m = v_s / V_DS;
+    float m = 0.57;
 
-    double period_1;
-    double period_2;
-    double period_3;
+    float period_b = SQRT3_OVER_TWO * m * PWM_PERIOD * sin(((PI * k) / 3) - phi);
+    float period_c = SQRT3_OVER_TWO * m * PWM_PERIOD * sin(-((PI * (k - 1)) / 3) + phi);
+    //float period_b = SQRT3_OVER_TWO * m * PWM_PERIOD * sine_lookup(((PI * k) / 3) - phi);
+    //float period_c = SQRT3_OVER_TWO * m * PWM_PERIOD * sine_lookup(-((PI * (k - 1)) / 3) + phi);
+    float period_a = PWM_PERIOD - period_b - period_c;
+
+    float period_1;
+    float period_2;
+    float period_3;
 
     switch (k) {
 
@@ -94,5 +91,6 @@ void foc_svpwm (double angle) {
 
     OC1R = (uint16_t) (399 - (period_1 / PWM_PERIOD * 399));
     OC2R = (uint16_t) (399 - (period_2 / PWM_PERIOD * 399));
+    OC3R = (uint16_t) (399 - (period_3 / PWM_PERIOD * 399));
 
 }
