@@ -3,4 +3,6 @@ main.c  \
 headers/system_params.h  \
  headers/uart.h  \
 headers/spi.h  \
-headers/mcpwm.h 
+headers/mcpwm.h  \
+headers/foc.h  \
+headers/adc.h 

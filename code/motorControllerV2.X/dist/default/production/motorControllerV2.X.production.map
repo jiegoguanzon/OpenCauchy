@@ -620,9 +620,9 @@ __CONFIG1
  *(.debug_abbrev)
  .debug_abbrev    0x000000        0x233 build/default/production/main.o
 
-.debug_line       0x000000        0x383
+.debug_line       0x000000        0x381
  *(.debug_line)
- .debug_line      0x000000        0x383 build/default/production/main.o
+ .debug_line      0x000000        0x381 build/default/production/main.o
 
 .debug_frame      0x000000        0x61a
  *(.debug_frame)
