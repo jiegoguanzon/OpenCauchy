@@ -48,11 +48,6 @@
 
 char uart_str[256];
 
-float phase_a_current, phase_b_current, phase_c_current;
-float i_alpha, i_beta;
-float i_d, i_q;
-float v_alpha, v_beta;
-
 int main (void) {
 
     ADPCFG = 0xFFFF;                    // Reset all ports to digital operation.
@@ -84,8 +79,7 @@ int main (void) {
 
     while (1) {
 
-        //foc_inv_park_transform(&v_alpha, &v_beta, 0, 0, angle * PI / 180);
-        //foc_svpwm(v_alpha, v_beta);
+        foc();
 
     }
 
