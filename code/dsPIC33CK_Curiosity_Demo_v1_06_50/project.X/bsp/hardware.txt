@@ -1,0 +1,90 @@
+================================================================
+PIC24F LCD Curiosity Development Board
+================================================================
+
+mikroBUS(tm) connections
+----------------------------------------------------------------
+The PIC24F256GA7 Curiosity Development Board has two mikroBUS 
+ports.  
+
+  +- mikroBUS A pin
+  |      +- Processor pin
+  |      |             
+/===\ /=====\ 
+AN   |  RB14 |
+RST  |  RD5  |
+CS   |  RE4  | 
+SCK  |  RD4  | - shared with mikroBUS B   
+MISO |  RD2  | - shared with mikroBUS B and TC77
+MOSI |  RD3  | - shared with mikroBUS B and TC77
+PWM  |  RG3  |
+INT  |  RF6  |
+RX   |  RD9  |
+TX   |  RD10 |
+SCL  |  RF5  | - shared with mikroBUS B
+SDA  |  RF4  | - shared with mikroBUS B
+
+  +- mikroBUS B pin
+  |      +- Processor pin
+  |      |             
+/===\ /=====\ 
+AN   |  RB15 |
+RST  |  RG6  |
+CS   |  RD11 | 
+SCK  |  RD4  | - shared with mikroBUS A     
+MISO |  RD2  | - shared with mikroBUS A and TC77
+MOSI |  RD3  | - shared with mikroBUS A and TC77
+PWM  |  RB5  |
+INT  |  RD8  |
+RX   |  RF2  | - shared with USB-UART converter
+TX   |  RF3  | - shared with USB-UART converter
+SCL  |  RF5  | - shared with mikroBUS A
+SDA  |  RF4  | - shared with mikroBUS A 
+
+Switches
+----------------------------------------------------------------
+
+  +- Switch
+  |      +- Processor pin
+  |      |            
+/===\ /=====\ 
+S1   |  RD1  |  
+S2   |  RD0  |
+S4   |  MCLR |
+
+LEDs
+----------------------------------------------------------------
+
+      +- Switch
+      |         +- Processor pin
+      |         |            
+/==========\ /=====\ 
+LED1        |  RC12 |  
+LED2        |  RC15 |
+LED3(red)   |  RG9  |
+LED3(green) |  RB4  |
+LED3(blue)  |  RB7  |
+
+Potentiometer
+----------------------------------------------------------------
+
+     +- Potentiometer
+     |            +- Processor pin
+     |            |            
+/============\ /=====\ 
+Potentiometer |  RA0 |  
+
+USB Power Sense
+----------------------------------------------------------------
+There is a resistor divider on RB2 that will take a 5v input and
+convert it to around 3.2v to allow for a simple I/O read
+operation to sense the USB power presence.
+
+References/Links
+----------------------------------------------------------------
+[1] http://www.mikroe.com/mikrobus/
+[2] http://www.microchip.com/pic24flcdcuriosity
+
+Legal
+----------------------------------------------------------------
+mikroBUS a trademark of MikroElectronika.

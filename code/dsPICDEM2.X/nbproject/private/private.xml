@@ -3,12 +3,10 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
-            <file>file:/C:/Users/jiego/Documents/OpenCauchy/code/dsPICDEM2.X/headers/mcpwm.h</file>
-            <file>file:/C:/Users/jiego/Documents/OpenCauchy/code/dsPICDEM2.X/headers/spi.h</file>
-            <file>file:/C:/Users/jiego/Documents/OpenCauchy/code/dsPICDEM2.X/headers/uart.h</file>
-            <file>file:/C:/Users/jiego/Documents/OpenCauchy/code/dsPICDEM2.X/main.c</file>
+            <file>file:/N:/Documents/OpenCauchy/code/dsPICDEM2.X/main.c</file>
+            <file>file:/N:/Documents/OpenCauchy/code/dsPICDEM2.X/headers/spi.h</file>
+            <file>file:/N:/Documents/OpenCauchy/code/dsPICDEM2.X/headers/mcpwm.h</file>
             <file>file:/C:/Program%20Files%20(x86)/Microchip/xc16/v1.36/support/dsPIC30F/h/p30F4011.h</file>
-            <file>file:/C:/Program%20Files%20(x86)/Microchip/xc16/v1.36/support/generic/h/libpic30.h</file>
         </group>
     </open-files>
 </project-private>
