@@ -4,8 +4,6 @@
 #define TIMER_PRESCALE_256  0b11
 
 typedef enum {
-    TIMER_CONFIG_100NS,
-    TIMER_CONFIG_250NS,
     TIMER_CONFIG_500NS,
     TIMER_CONFIG_1US,
     TIMER_CONFIG_1MS,
@@ -17,48 +15,6 @@ bool timer1_init (TIMER_CONFIGS configuration) {
 
     switch (configuration) {
         
-        case TIMER_CONFIG_100NS:
-
-            _TON = 0;
-
-            _T1IE = 0;
-            _T1IF = 0;
-            _T1IP = 4;
-
-            TMR1 = 0;
-            PR1 = 18;
-
-            _TECS = 0b10;       // Use FOSC
-            _TCS = 1;
-            _TSYNC = 0;
-            _TCKPS = TIMER_PRESCALE_1;      // Input clock prescale 1:8
-            _TON = 1;
-
-            _T1IE = 1;
-
-            return true;
-        
-        case TIMER_CONFIG_250NS:
-
-            _TON = 0;
-
-            _T1IE = 0;
-            _T1IF = 0;
-            _T1IP = 4;
-
-            TMR1 = 0;
-            PR1 = 45;
-
-            _TECS = 0b10;       // Use FOSC
-            _TCS = 1;
-            _TSYNC = 0;
-            _TCKPS = TIMER_PRESCALE_1;      // Input clock prescale 1:8
-            _TON = 1;
-
-            _T1IE = 1;
-
-            return true;
-
         case TIMER_CONFIG_500NS:
 
             _TON = 0;
@@ -154,13 +110,6 @@ bool timer1_init (TIMER_CONFIGS configuration) {
 }
 
 void __attribute__((__interrupt__, auto_psv)) _T1Interrupt (void) {
-
-    if (!_RE6)
-        _LATE6 = 1;
-    else
-        _LATE6 = 0;
-    /*
-    */
 
     _T1IF = 0;
 

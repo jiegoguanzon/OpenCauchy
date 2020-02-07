@@ -3,8 +3,19 @@ main.c  \
 headers/clock.h  \
 headers/system.h  \
  headers/uart1.h  \
-headers/pwm.h  \
+headers/user_parameters.h  \
+ headers/mc/motor_control_types.h  \
+headers/mc/motor_control_declarations.h  \
+ headers/mc/motor_control_types.h  \
+headers/meascurr.h  \
+headers/control.h  \
+ headers/pwm.h  \
 headers/adc.h  \
-headers/foc.h  \
- headers/foc_structs.h  \
-headers/timer1.h 
+headers/estimator.h  \
+ headers/mc/motor_control_declarations.h  \
+headers/user_parameters.h  \
+ headers/control.h  \
+headers/readadc.h  \
+headers/spi.h  \
+headers/drv8323.h  \
+ headers/timer1.h 

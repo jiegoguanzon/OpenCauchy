@@ -15,6 +15,17 @@
                    projectFiles="true">
       <itemPath>main.c</itemPath>
       <itemPath>uart1.c</itemPath>
+      <itemPath>meascurr.s</itemPath>
+      <itemPath>mc_sinetable_ram_dspic.s</itemPath>
+      <itemPath>mc_clarke_dspic.s</itemPath>
+      <itemPath>mc_invclarke_dspic.s</itemPath>
+      <itemPath>mc_invpark_dspic.s</itemPath>
+      <itemPath>mc_park_dspic.s</itemPath>
+      <itemPath>mc_piupdate_dspic.s</itemPath>
+      <itemPath>mc_sinecos_ram_dspic.s</itemPath>
+      <itemPath>mc_sinetable_flash_dspic.s</itemPath>
+      <itemPath>mc_svgen_dspic.s</itemPath>
+      <itemPath>readadc0.s</itemPath>
     </logicalFolder>
     <logicalFolder name="ExternalFiles"
                    displayName="Important Files"
@@ -24,6 +35,7 @@
   </logicalFolder>
   <sourceRootList>
     <Elem>../../../../../../Program Files (x86)/Microchip/xc16/v1.41/support/generic/h</Elem>
+    <Elem>.</Elem>
   </sourceRootList>
   <projectmakefile>Makefile</projectmakefile>
   <confs>
