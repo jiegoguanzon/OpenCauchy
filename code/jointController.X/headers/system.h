@@ -87,6 +87,10 @@ void __attribute__ ( ( __interrupt__ , auto_psv ) ) _MathError ( void ) ;
 
 void system_init ( void ) {    
 
+    _LATD5 = 1;
+    _LATD6 = 0;
+    _LATD7 = 0;
+
     __builtin_write_RPCON(0x0000);
 
     _RP68R = 1;                 //UART PPS - RD4[RP68] = U1TX 

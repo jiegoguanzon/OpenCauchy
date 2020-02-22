@@ -133,7 +133,7 @@ void estimate_angle () {
         if (estimator.qDIalpha > estimator.qDIlimitHS) 
             estimator.qDIalpha = estimator.qDIlimitHS;
 
-        if (estimator.qDIalpha<-estimator.qDIlimitHS) 
+        if (estimator.qDIalpha < -estimator.qDIlimitHS) 
             estimator.qDIalpha = -estimator.qDIlimitHS;
             
         estimator.qVIndalpha = (int16_t) (__builtin_mulss(motor_parameters.qLsDt, estimator.qDIalpha) >> 7);
@@ -146,7 +146,7 @@ void estimate_angle () {
         if (estimator.qDIbeta > estimator.qDIlimitHS) 
             estimator.qDIbeta = estimator.qDIlimitHS;
 
-        if (estimator.qDIbeta<-estimator.qDIlimitHS) 
+        if (estimator.qDIbeta < -estimator.qDIlimitHS) 
             estimator.qDIbeta = -estimator.qDIlimitHS;
 
         estimator.qVIndbeta = (int16_t) (__builtin_mulss(motor_parameters.qLsDt, estimator.qDIbeta) >> 7);

@@ -52,12 +52,18 @@ void init_control_parameters(void);
 void reset_parameters(void);
 void calculate_park_angle(void);
 void measure_curr_offset(int16_t *, int16_t *);
+void print_diag(void);
 
 int main(void) {
 
+    _TRISC0 = 0;
+    DRV_ENABLE = 0;
     _TRISE6 = 0;
     _LATE6 = 0;
     uGF.bits.RunMotor = 0;
+
+    __delay_ms(100);
+    DRV_ENABLE = 1;
 
     clock_init();
     system_init();
@@ -65,31 +71,39 @@ int main(void) {
     adc_init();
     spi_init();
 
-    _LATE6 = 1;
+    //_LATE6 = 1;
     __delay_ms(1000);
+    //read_ocp();
     set_idrive_hs();
     set_idrive_ls();
-    printf("OCP: 0x%X\n", read_ocp);
-    printf("OCP: 0x%X\n", read_ocp);
+    //set_ocp();
+    //printf("OCP: 0x%04X\n", read_ocp());
+    //printf("GDLS: 0x%04X\n", read_gdls());
+    //printf("GDHS: 0x%04X\n", read_gdhs());
     __delay_ms(1000);
-    _LATE6 = 0;
+    //_LATE6 = 0;
 
     measure_curr_offset(&meas_curr_parm.Offseta, &meas_curr_parm.Offsetb);
-    printf("Offset A: %d\tOffset B: %d\n", meas_curr_parm.Offseta, meas_curr_parm.Offsetb);
 
     CORCONbits.SATA = 0;
 
     reset_parameters();
-
     pwm_enable_outputs();
-    uGF.bits.RunMotor = 1;
+
+    print_diag();
+    
+    uGF.bits.RunMotor = 0;
 
     while (1) {
+
+        print_diag();
 
         if (uGF.bits.OpenLoop)
             _LATE6 = 1;
         else
             _LATE6 = 0;
+
+        __delay_ms(500);
 
     } 
 
@@ -425,4 +439,17 @@ void measure_curr_offset (int16_t *pOffseta,int16_t *pOffsetb) {
     
     /* Make sure ADC does not generate interrupt while initializing parameters*/
     DisableADCInterrupt();
+}
+
+void print_diag () {
+
+    printf("\033[2J");      //Clear screen
+    printf("\033[0;0f");    //return cursor to 0,0
+    printf("\033[?25l");    //disable cursor
+
+    printf("Run Motor: %s\n", uGF.bits.RunMotor ? "Yes" : "No");
+    printf("Run Mode: %s\n", uGF.bits.OpenLoop ? "Open Loop" : "Closed Loop");
+    printf("\nADC Offset A: %d\tADC Offset B: %d\n", meas_curr_parm.Offseta, meas_curr_parm.Offsetb);
+    printf("\nFS Register 1: 0x%04X\t FS Register 2: 0x%04X\n", read_fs1(), read_fs2());
+
 }

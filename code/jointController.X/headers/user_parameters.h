@@ -70,11 +70,12 @@ before the open loop speed ramp up */
 /* This number is: 20,000 is 1 second. */
 #define LOCK_TIME 4000 
 /* Open loop speed ramp up end value Value in RPM*/
-#define END_SPEED_RPM 500 
+#define END_SPEED_RPM 600 
 /* Open loop acceleration */
-#define OPENLOOP_RAMPSPEED_INCREASERATE 10
+#define OPENLOOP_RAMPSPEED_INCREASERATE 5
 /* Open loop q current setup - */
-#define Q_CURRENT_REF_OPENLOOP NORM_CURRENT(1.41)
+#define Q_CURRENT_REF_OPENLOOP NORM_CURRENT(1.00)
+//#define Q_CURRENT_REF_OPENLOOP NORM_CURRENT(1.41)
 
 /* Maximum motor speed converted into electrical speed */
 #define MAXIMUMSPEED_ELECTR MAXIMUM_SPEED_RPM * NOPOLEPAIRS

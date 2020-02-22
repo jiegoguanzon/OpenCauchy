@@ -3,12 +3,13 @@
 
 #define PWM_FREQ_REG        (((50 * 180) / 2) - 1)
 #define PWM_FREQ_HZ         20000
-#define PWM_MIN_DUTY        0x0000
+//#define PWM_MIN_DUTY        0x0000
+#define PWM_MIN_DUTY        PWM_FREQ_REG / 2;
 #define ADC_SAMPLING_POINT  0x0000
 #define LOOPTIME_SEC        0.00005
 #define LOOPTIME_MICROSEC   50
 #define LOOPTIME_TCY        (uint16_t)(((LOOPTIME_MICROSEC * FOSC_MHZ) / 2) - 1)
-#define DEADTIME_MICROSEC   1.0
+#define DEADTIME_MICROSEC   2.0
 #define DEADTIME           (uint16_t) (DEADTIME_MICROSEC * FOSC_MHZ)
 
 void pwm1_init();
