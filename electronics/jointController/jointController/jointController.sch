@@ -20,7 +20,7 @@ U 1 1 5E54FF31
 P 900 1250
 F 0 "J1" H 794 925 50  0000 C CNN
 F 1 "PWR_IN" H 794 1016 50  0000 C CNN
-F 2 "Connector_PinHeader_2.54mm:PinHeader_1x02_P2.54mm_Vertical" H 900 1250 50  0001 C CNN
+F 2 "Connector_Wire:SolderWirePad_1x02_P5.08mm_Drill1.5mm" H 900 1250 50  0001 C CNN
 F 3 "~" H 900 1250 50  0001 C CNN
 	1    900  1250
 	-1   0    0    1   
@@ -536,7 +536,7 @@ U 1 1 5E5F72AB
 P 8700 3350
 F 0 "J4" H 8727 3376 50  0000 L CNN
 F 1 "A_OUT" H 8727 3285 50  0000 L CNN
-F 2 "Connector_PinHeader_2.54mm:PinHeader_1x01_P2.54mm_Vertical" H 8700 3350 50  0001 C CNN
+F 2 "Connector_Wire:SolderWirePad_1x01_Drill1.5mm" H 8700 3350 50  0001 C CNN
 F 3 "~" H 8700 3350 50  0001 C CNN
 	1    8700 3350
 	1    0    0    -1  
@@ -547,7 +547,7 @@ U 1 1 5E5F7319
 P 8700 3550
 F 0 "J5" H 8728 3576 50  0000 L CNN
 F 1 "B_OUT" H 8728 3485 50  0000 L CNN
-F 2 "Connector_PinHeader_2.54mm:PinHeader_1x01_P2.54mm_Vertical" H 8700 3550 50  0001 C CNN
+F 2 "Connector_Wire:SolderWirePad_1x01_Drill1.5mm" H 8700 3550 50  0001 C CNN
 F 3 "~" H 8700 3550 50  0001 C CNN
 	1    8700 3550
 	1    0    0    -1  
@@ -558,7 +558,7 @@ U 1 1 5E5F7349
 P 8700 3750
 F 0 "J6" H 8728 3776 50  0000 L CNN
 F 1 "C_OUT" H 8728 3685 50  0000 L CNN
-F 2 "Connector_PinHeader_2.54mm:PinHeader_1x01_P2.54mm_Vertical" H 8700 3750 50  0001 C CNN
+F 2 "Connector_Wire:SolderWirePad_1x01_Drill1.5mm" H 8700 3750 50  0001 C CNN
 F 3 "~" H 8700 3750 50  0001 C CNN
 	1    8700 3750
 	1    0    0    -1  
