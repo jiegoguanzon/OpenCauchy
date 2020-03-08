@@ -1,3 +1,4 @@
 (sym_lib_table
   (lib (name jointController)(type Legacy)(uri N:/Documents/OpenCauchy/electronics/jointController/jointController/jointController.lib)(options "")(descr ""))
+  (lib (name jointController-rescue)(type Legacy)(uri ${KIPRJMOD}/jointController-rescue.lib)(options "")(descr ""))
 )

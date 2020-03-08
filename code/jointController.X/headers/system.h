@@ -91,12 +91,17 @@ void system_init ( void ) {
     _LATD6 = 0;
     _LATD7 = 0;
 
+    _TRISC4 = 0;
+    _TRISB9 = 1;
+
     __builtin_write_RPCON(0x0000);
 
     _RP68R = 1;                 //UART PPS - RD4[RP68] = U1TX 
     RPINR20bits.SDI1R = 69;     // SDI1 to RD5 !!!CHANGE TO RC2!!!
     _RP70R = 5;                 //SDO1 to RD6  !!!CHANGE TO RC6!!!
     _RP71R = 6;                 //SCK1 to RD7  !!!CHANGE TO RC1!!!
+    RPINR26bits.CAN1RXR = 41;   // CAN1RX to RB9
+    _RP52R = 21;                // CAN1TX to RC4
 
     __builtin_write_RPCON(0x0800);
 

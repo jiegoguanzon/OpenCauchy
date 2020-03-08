@@ -1,0 +1,389 @@
+EESchema Schematic File Version 4
+EELAYER 30 0
+EELAYER END
+$Descr A4 11693 8268
+encoding utf-8
+Sheet 2 6
+Title ""
+Date ""
+Rev ""
+Comp ""
+Comment1 ""
+Comment2 ""
+Comment3 ""
+Comment4 ""
+$EndDescr
+$Comp
+L jointController-rescue:Q_NMOS_DGS-Device Q1
+U 1 1 5E5F911B
+P 4200 3300
+F 0 "Q1" H 4406 3346 50  0000 L CNN
+F 1 "NTMFS4935NT1G" H 4406 3255 50  0000 L CNN
+F 2 "" H 4400 3400 50  0001 C CNN
+F 3 "~" H 4200 3300 50  0001 C CNN
+	1    4200 3300
+	1    0    0    -1  
+$EndComp
+$Comp
+L jointController-rescue:Q_NMOS_DGS-Device Q2
+U 1 1 5E5F9122
+P 4200 4000
+F 0 "Q2" H 4406 4046 50  0000 L CNN
+F 1 "NTMFS4935NT1G" H 4406 3955 50  0000 L CNN
+F 2 "" H 4400 4100 50  0001 C CNN
+F 3 "~" H 4200 4000 50  0001 C CNN
+	1    4200 4000
+	1    0    0    -1  
+$EndComp
+$Comp
+L jointController-rescue:C_Small-Device C4
+U 1 1 5E5F9129
+P 4600 2900
+F 0 "C4" H 4692 2946 50  0000 L CNN
+F 1 "10uF" H 4692 2855 50  0000 L CNN
+F 2 "" H 4600 2900 50  0001 C CNN
+F 3 "~" H 4600 2900 50  0001 C CNN
+	1    4600 2900
+	1    0    0    -1  
+$EndComp
+$Comp
+L jointController-rescue:GND-power #PWR011
+U 1 1 5E5F9130
+P 4600 3000
+F 0 "#PWR011" H 4600 2750 50  0001 C CNN
+F 1 "GND" H 4605 2827 50  0000 C CNN
+F 2 "" H 4600 3000 50  0001 C CNN
+F 3 "" H 4600 3000 50  0001 C CNN
+	1    4600 3000
+	1    0    0    -1  
+$EndComp
+$Comp
+L jointController-rescue:VCC-power #PWR09
+U 1 1 5E5F9136
+P 4300 2750
+F 0 "#PWR09" H 4300 2600 50  0001 C CNN
+F 1 "VCC" H 4317 2923 50  0000 C CNN
+F 2 "" H 4300 2750 50  0001 C CNN
+F 3 "" H 4300 2750 50  0001 C CNN
+	1    4300 2750
+	1    0    0    -1  
+$EndComp
+Text GLabel 3900 3300 0    50   Input ~ 0
+GHA
+Text GLabel 3900 3650 0    50   Input ~ 0
+SHA
+Text GLabel 3900 4000 0    50   Input ~ 0
+GLA
+$Comp
+L jointController-rescue:R_Small-Device R1
+U 1 1 5E5F913F
+P 4300 4500
+F 0 "R1" H 4359 4546 50  0000 L CNN
+F 1 "1m" H 4359 4455 50  0000 L CNN
+F 2 "" H 4300 4500 50  0001 C CNN
+F 3 "~" H 4300 4500 50  0001 C CNN
+	1    4300 4500
+	1    0    0    -1  
+$EndComp
+Text GLabel 3900 4300 0    50   Input ~ 0
+SPA
+Text GLabel 3900 4700 0    50   Input ~ 0
+SNA
+$Comp
+L jointController-rescue:GND-power #PWR010
+U 1 1 5E5F9148
+P 4300 4800
+F 0 "#PWR010" H 4300 4550 50  0001 C CNN
+F 1 "GND" H 4305 4627 50  0000 C CNN
+F 2 "" H 4300 4800 50  0001 C CNN
+F 3 "" H 4300 4800 50  0001 C CNN
+	1    4300 4800
+	1    0    0    -1  
+$EndComp
+Text GLabel 4500 3650 2    50   Input ~ 0
+A_OUT
+Wire Wire Line
+	4300 2750 4300 2800
+Wire Wire Line
+	4300 2800 4600 2800
+Connection ~ 4300 2800
+Wire Wire Line
+	4300 2800 4300 3100
+Wire Wire Line
+	4000 3300 3900 3300
+Wire Wire Line
+	4300 3500 4300 3650
+Wire Wire Line
+	3900 3650 4300 3650
+Connection ~ 4300 3650
+Wire Wire Line
+	4300 3650 4300 3800
+Wire Wire Line
+	4300 3650 4500 3650
+Wire Wire Line
+	3900 4000 4000 4000
+Wire Wire Line
+	4300 4200 4300 4300
+Wire Wire Line
+	3900 4300 4300 4300
+Connection ~ 4300 4300
+Wire Wire Line
+	4300 4300 4300 4400
+Wire Wire Line
+	4300 4600 4300 4700
+Wire Wire Line
+	3900 4700 4300 4700
+Connection ~ 4300 4700
+Wire Wire Line
+	4300 4700 4300 4800
+$Comp
+L jointController-rescue:Q_NMOS_DGS-Device Q3
+U 1 1 5E5F9162
+P 5650 3300
+F 0 "Q3" H 5856 3346 50  0000 L CNN
+F 1 "NTMFS4935NT1G" H 5856 3255 50  0000 L CNN
+F 2 "" H 5850 3400 50  0001 C CNN
+F 3 "~" H 5650 3300 50  0001 C CNN
+	1    5650 3300
+	1    0    0    -1  
+$EndComp
+$Comp
+L jointController-rescue:Q_NMOS_DGS-Device Q4
+U 1 1 5E5F9169
+P 5650 4000
+F 0 "Q4" H 5856 4046 50  0000 L CNN
+F 1 "NTMFS4935NT1G" H 5856 3955 50  0000 L CNN
+F 2 "" H 5850 4100 50  0001 C CNN
+F 3 "~" H 5650 4000 50  0001 C CNN
+	1    5650 4000
+	1    0    0    -1  
+$EndComp
+$Comp
+L jointController-rescue:C_Small-Device C5
+U 1 1 5E5F9170
+P 6050 2900
+F 0 "C5" H 6142 2946 50  0000 L CNN
+F 1 "10uF" H 6142 2855 50  0000 L CNN
+F 2 "" H 6050 2900 50  0001 C CNN
+F 3 "~" H 6050 2900 50  0001 C CNN
+	1    6050 2900
+	1    0    0    -1  
+$EndComp
+$Comp
+L jointController-rescue:GND-power #PWR014
+U 1 1 5E5F9177
+P 6050 3000
+F 0 "#PWR014" H 6050 2750 50  0001 C CNN
+F 1 "GND" H 6055 2827 50  0000 C CNN
+F 2 "" H 6050 3000 50  0001 C CNN
+F 3 "" H 6050 3000 50  0001 C CNN
+	1    6050 3000
+	1    0    0    -1  
+$EndComp
+$Comp
+L jointController-rescue:VCC-power #PWR012
+U 1 1 5E5F917D
+P 5750 2750
+F 0 "#PWR012" H 5750 2600 50  0001 C CNN
+F 1 "VCC" H 5767 2923 50  0000 C CNN
+F 2 "" H 5750 2750 50  0001 C CNN
+F 3 "" H 5750 2750 50  0001 C CNN
+	1    5750 2750
+	1    0    0    -1  
+$EndComp
+Text GLabel 5350 3300 0    50   Input ~ 0
+GHB
+Text GLabel 5350 3650 0    50   Input ~ 0
+SHB
+Text GLabel 5350 4000 0    50   Input ~ 0
+GLB
+$Comp
+L jointController-rescue:R_Small-Device R2
+U 1 1 5E5F9186
+P 5750 4500
+F 0 "R2" H 5809 4546 50  0000 L CNN
+F 1 "1m" H 5809 4455 50  0000 L CNN
+F 2 "" H 5750 4500 50  0001 C CNN
+F 3 "~" H 5750 4500 50  0001 C CNN
+	1    5750 4500
+	1    0    0    -1  
+$EndComp
+Text GLabel 5350 4300 0    50   Input ~ 0
+SPB
+Text GLabel 5350 4700 0    50   Input ~ 0
+SNB
+$Comp
+L jointController-rescue:GND-power #PWR013
+U 1 1 5E5F918F
+P 5750 4800
+F 0 "#PWR013" H 5750 4550 50  0001 C CNN
+F 1 "GND" H 5755 4627 50  0000 C CNN
+F 2 "" H 5750 4800 50  0001 C CNN
+F 3 "" H 5750 4800 50  0001 C CNN
+	1    5750 4800
+	1    0    0    -1  
+$EndComp
+Text GLabel 5950 3650 2    50   Input ~ 0
+B_OUT
+Wire Wire Line
+	5750 2750 5750 2800
+Wire Wire Line
+	5750 2800 6050 2800
+Connection ~ 5750 2800
+Wire Wire Line
+	5750 2800 5750 3100
+Wire Wire Line
+	5450 3300 5350 3300
+Wire Wire Line
+	5750 3500 5750 3650
+Wire Wire Line
+	5350 3650 5750 3650
+Connection ~ 5750 3650
+Wire Wire Line
+	5750 3650 5750 3800
+Wire Wire Line
+	5750 3650 5950 3650
+Wire Wire Line
+	5350 4000 5450 4000
+Wire Wire Line
+	5750 4200 5750 4300
+Wire Wire Line
+	5350 4300 5750 4300
+Connection ~ 5750 4300
+Wire Wire Line
+	5750 4300 5750 4400
+Wire Wire Line
+	5750 4600 5750 4700
+Wire Wire Line
+	5350 4700 5750 4700
+Connection ~ 5750 4700
+Wire Wire Line
+	5750 4700 5750 4800
+$Comp
+L jointController-rescue:Q_NMOS_DGS-Device Q5
+U 1 1 5E5F91A9
+P 7100 3300
+F 0 "Q5" H 7306 3346 50  0000 L CNN
+F 1 "NTMFS4935NT1G" H 7306 3255 50  0000 L CNN
+F 2 "" H 7300 3400 50  0001 C CNN
+F 3 "~" H 7100 3300 50  0001 C CNN
+	1    7100 3300
+	1    0    0    -1  
+$EndComp
+$Comp
+L jointController-rescue:Q_NMOS_DGS-Device Q6
+U 1 1 5E5F91B0
+P 7100 4000
+F 0 "Q6" H 7306 4046 50  0000 L CNN
+F 1 "NTMFS4935NT1G" H 7306 3955 50  0000 L CNN
+F 2 "" H 7300 4100 50  0001 C CNN
+F 3 "~" H 7100 4000 50  0001 C CNN
+	1    7100 4000
+	1    0    0    -1  
+$EndComp
+$Comp
+L jointController-rescue:C_Small-Device C6
+U 1 1 5E5F91B7
+P 7500 2900
+F 0 "C6" H 7592 2946 50  0000 L CNN
+F 1 "10uF" H 7592 2855 50  0000 L CNN
+F 2 "" H 7500 2900 50  0001 C CNN
+F 3 "~" H 7500 2900 50  0001 C CNN
+	1    7500 2900
+	1    0    0    -1  
+$EndComp
+$Comp
+L jointController-rescue:GND-power #PWR017
+U 1 1 5E5F91BE
+P 7500 3000
+F 0 "#PWR017" H 7500 2750 50  0001 C CNN
+F 1 "GND" H 7505 2827 50  0000 C CNN
+F 2 "" H 7500 3000 50  0001 C CNN
+F 3 "" H 7500 3000 50  0001 C CNN
+	1    7500 3000
+	1    0    0    -1  
+$EndComp
+$Comp
+L jointController-rescue:VCC-power #PWR015
+U 1 1 5E5F91C4
+P 7200 2750
+F 0 "#PWR015" H 7200 2600 50  0001 C CNN
+F 1 "VCC" H 7217 2923 50  0000 C CNN
+F 2 "" H 7200 2750 50  0001 C CNN
+F 3 "" H 7200 2750 50  0001 C CNN
+	1    7200 2750
+	1    0    0    -1  
+$EndComp
+Text GLabel 6800 3300 0    50   Input ~ 0
+GHC
+Text GLabel 6800 3650 0    50   Input ~ 0
+SHC
+Text GLabel 6800 4000 0    50   Input ~ 0
+GLC
+$Comp
+L jointController-rescue:R_Small-Device R3
+U 1 1 5E5F91CD
+P 7200 4500
+F 0 "R3" H 7259 4546 50  0000 L CNN
+F 1 "1m" H 7259 4455 50  0000 L CNN
+F 2 "" H 7200 4500 50  0001 C CNN
+F 3 "~" H 7200 4500 50  0001 C CNN
+	1    7200 4500
+	1    0    0    -1  
+$EndComp
+Text GLabel 6800 4300 0    50   Input ~ 0
+SPC
+Text GLabel 6800 4700 0    50   Input ~ 0
+SNC
+$Comp
+L jointController-rescue:GND-power #PWR016
+U 1 1 5E5F91D6
+P 7200 4800
+F 0 "#PWR016" H 7200 4550 50  0001 C CNN
+F 1 "GND" H 7205 4627 50  0000 C CNN
+F 2 "" H 7200 4800 50  0001 C CNN
+F 3 "" H 7200 4800 50  0001 C CNN
+	1    7200 4800
+	1    0    0    -1  
+$EndComp
+Text GLabel 7400 3650 2    50   Input ~ 0
+C_OUT
+Wire Wire Line
+	7200 2750 7200 2800
+Wire Wire Line
+	7200 2800 7500 2800
+Connection ~ 7200 2800
+Wire Wire Line
+	7200 2800 7200 3100
+Wire Wire Line
+	6900 3300 6800 3300
+Wire Wire Line
+	7200 3500 7200 3650
+Wire Wire Line
+	6800 3650 7200 3650
+Connection ~ 7200 3650
+Wire Wire Line
+	7200 3650 7200 3800
+Wire Wire Line
+	7200 3650 7400 3650
+Wire Wire Line
+	6800 4000 6900 4000
+Wire Wire Line
+	7200 4200 7200 4300
+Wire Wire Line
+	6800 4300 7200 4300
+Connection ~ 7200 4300
+Wire Wire Line
+	7200 4300 7200 4400
+Wire Wire Line
+	7200 4600 7200 4700
+Wire Wire Line
+	6800 4700 7200 4700
+Connection ~ 7200 4700
+Wire Wire Line
+	7200 4700 7200 4800
+Text GLabel 5500 2800 0    50   Input ~ 0
+V_DRAIN
+Wire Wire Line
+	5500 2800 5750 2800
+$EndSCHEMATC

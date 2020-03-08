@@ -14,6 +14,7 @@
 #include "headers/readadc.h"
 #include "headers/spi.h"
 #include "headers/drv8323.h"
+#include "headers/can.h"
 #include "headers/timer1.h"
 
 volatile UGF_T uGF;
@@ -70,6 +71,7 @@ int main(void) {
     pwm_init();
     adc_init();
     spi_init();
+    can_init();
 
     //_LATE6 = 1;
     __delay_ms(1000);
@@ -97,6 +99,7 @@ int main(void) {
     while (1) {
 
         print_diag();
+        can_transmit();
 
         if (uGF.bits.OpenLoop)
             _LATE6 = 1;

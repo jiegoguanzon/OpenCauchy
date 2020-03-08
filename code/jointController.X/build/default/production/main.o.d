@@ -18,4 +18,5 @@ headers/user_parameters.h  \
 headers/readadc.h  \
 headers/spi.h  \
 headers/drv8323.h  \
- headers/timer1.h 
+ headers/can.h  \
+headers/timer1.h 
